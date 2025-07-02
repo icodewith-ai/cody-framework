@@ -1,0 +1,16 @@
+{
+  "title": "Starting Prompt Analysis",
+  "description": "This step guides the user through capturing and refining their initial project idea.",
+  "documentTemplate": "project-template/discovery/01-starting-prompt/starting-prompt.md",
+  "promptTemplate": "project-template/discovery/01-starting-prompt/prompt-template.prompt",
+  "workflow": {
+    "previous": "none",
+    "next": "project-template/discovery/02-questions-and-answers/questions-and-answers.md"
+  },
+  "templates": {
+    "startingPrompt": "project-template/discovery/01-starting-prompt/starting-prompt.md"
+  },
+  "documents": {
+    "startingPrompt": ".vibedocs/discovery/01-starting-prompt.md"
+  }
+}

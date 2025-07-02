@@ -1,0 +1,17 @@
+{
+  "title": "Questions and Answers Dialog with AI",
+  "description": "This step clarifies project details through a structured Q&A with the user.",
+  "documentTemplate": "project-template/discovery/02-questions-and-answers/questions-and-answers.md",
+  "promptTemplate": "project-template/discovery/02-questions-and-answers/prompt-template.prompt",
+  "workflow": {
+    "previous": "project-template/discovery/01-starting-prompt/starting-prompt.md",
+    "next": "project-template/discovery/03-prd/prd.md"
+  },
+  "templates": {
+    "qAndA": "project-template/discovery/02-questions-and-answers/questions-and-answers.md"
+  },
+  "documents": {
+    "startingPrompt": ".vibedocs/discovery/01-starting-prompt.md",
+    "qAndA": ".vibedocs/discovery/02-questions-and-answers.md"
+  }
+}

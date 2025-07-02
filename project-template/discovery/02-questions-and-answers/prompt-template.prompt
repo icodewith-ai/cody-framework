@@ -1,0 +1,28 @@
+<prompttemplate id="questions-and-answers-workflow">
+
+    <prompt id="verifyOrCreateQandADocument">
+        <if condition="{{document.qAndA}} does not exist">
+            Please create {{document.qAndA}} using {{template.qAndA}} and tell the **USER** where they can 
+            find the new {{document.qAndA}}.
+        </if>
+        <nextprompt prompt="createQandADocument" />
+    </prompt>
+
+    <prompt id="updateQandADocument">
+        Take the {{document.startingPrompt}}, analyze it and if
+        you have questions about it, please generate a list of detailed questions for
+        the **USER** to answer inside the {{document.qAndA}} document.  
+        These questions should help you get achieve more clarity
+        on the requirements of the project before moving on to the next workflow step.
+
+        <dountil condition="**USER** and **ASSISTANT** are both satisfied with the updates>
+            Re-read the {{document.qAndA}} and either ask the **USER** more 
+            questions if you need further clarification, or answer **USER** questions.
+
+            Ask the **USER** to verify and either update or signal they are satisfied.
+        </dountil>    
+    </prompt>
+
+    <nextworkflowstep />
+
+</prompttemplate>
