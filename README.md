@@ -1,6 +1,6 @@
 # Vibedocs
 
-Vibedocs brings structure and repeatability to the unstructured world of "vibe coding" by guiding users from vague ideas to well-defined, versioned feature implementations. It guides users from the initial idea through discovery, PRD creation, feature planning, task breakdown, and final implementation.
+Vibedocs brings structure and repeatability to the unstructured world of vibe coding by guiding users from vague ideas to well-defined, versioned feature implementations. It guides users from the initial idea through discovery, PRD creation, feature planning, task breakdown, and final implementation.
 
 ## Problem Statement
 
@@ -14,7 +14,7 @@ What's missing is a lightweight yet structured process that complements the spon
 
 ## Who is it For?
 
-Vibedocs is designed specifically for **solo creators**—especially those practicing "vibe coding," where rapid ideation and prompt-based development are central. It's optimized for:
+Vibedocs is designed specifically for **solo creators**—especially those practicing vibe coding, where rapid ideation and prompt-based development are central. It's optimized for:
 
 - One-person workflows
 - Exploratory coding sessions
@@ -82,3 +82,7 @@ By using Vibedocs, solo creators can expect:
 - Faster iteration with reusable planning artifacts like tasklists and PRDs
 - Improved handoff and memory — even for solo devs coming back months later
 - Better alignment between vision, implementation, and documentation
+
+## License
+
+This project is licensed under a custom license. See the [LICENSE.md](LICENSE.md) file for details.
