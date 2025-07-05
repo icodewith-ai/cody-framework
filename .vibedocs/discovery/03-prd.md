@@ -69,14 +69,8 @@ Vibedocs workflows (how the documents move from one to the next) are defined in 
 │   ├── 01-starting-prompt.md
 │   ├── 02-questions-and-answers.md
 │   ├── 03-prd.md
-│   └── 04-plan.md
-├── reference-library/
-│   ├── content-management.md
-│   ├── css.md
-│   ├── folder-structure.md
-│   ├── functional-breakdown.md
-│   ├── javascript.md
-│   └── tech-stack.md
+│   ├── 04-plan.md
+│   └── 05-feature-backlog.md
 ├── releases/
 │   ├── v1.0.0/
 │   │   ├── 01-starting-prompt.md
@@ -85,7 +79,14 @@ Vibedocs workflows (how the documents move from one to the next) are defined in 
 │   │   ├── 04-tasklist.md
 │   │   ├── 05-release-notes.md
 │   │   └── 06-retrospective.md
-│   └── v1.1.1/
+│   └── v1.1.1/...
+├── reference-library/
+│   ├── content-management.md
+│   ├── css.md
+│   ├── folder-structure.md
+│   ├── functional-breakdown.md
+│   ├── javascript.md
+│   └── tech-stack.md
 ```
 
 ## Document Descriptions
@@ -99,19 +100,20 @@ Documents to help define and formalize the product idea.
 | `02-questions-and-answers.md` | Refines the initial idea through a dialogue with AI, clarifying goals and scope. |
 | `03-prd.md` | Formalizes the idea into a Product Requirements Document. Defines what the product should do. |
 | `04-plan.md` | Defines how and when the product will be built and delivered. |
+| `05-feature-backlog.md` | A list of the main features you’ll need to build, based on your plan. This acts as your product backlog — you’ll pull from it when deciding what to include in each release. |
 
 
 ### Releases
 Detailed documentation for each release of the product.
 
-| Document           | Description                                                        |
-| ------------------ | ------------------------------------------------------------------ |
-| `01-starting-prompt.md` | Describes the focus and scope of this release. |
-| `02-questions-and-answers.md` | Refines the starting prompt through a dialog with AI, clarifying and enhancing the original prompt. |
-| `03-plan.md` | Describes, in detail, how to go about implementing this release. |
-| `04-tasklist.md` | Lists tasks to be completed for the release. |
-| `05-release-notes.md` | Summarizes new features, enhancements, fixes, and changes. |
-| `06-retrospective.md` | Records what went well, what could be improved, and key decisions. |
+| Document           | Development Phase  | Description                                                        |
+| ------------------ | ------------------ | ------------------------------------------------------------------ |
+| `01-starting-prompt.md` | Before | Describes the focus and scope of this release based on the feature backlog in the discovery phase. |
+| `02-questions-and-answers.md` | Before | Refines the starting prompt through a dialog with AI, clarifying and enhancing the original prompt. |
+| `03-plan.md` | Before | Describes, in detail, how to go about implementing this release. |
+| `04-tasklist.md` | During | Lists tasks to be completed for the release. |
+| `05-release-notes.md` | After | Summarizes new features, enhancements, fixes, and changes. |
+| `06-retrospective.md` | After | Records what went well, what could be improved, and key decisions. |
 
 <a id="reference-library"></a>
 ### Reference Library 
