@@ -1,0 +1,28 @@
+{
+    "documents": [
+        {
+            "template": "@vibedocs-engine/templates/discovery/starting-prompt.md",
+            "document": "@.vibedocs/discovery/starting-prompt.md",
+            "alias": "starting-prompt",
+            "friendlyName": "Starting Prompt Document"
+        },
+        {
+            "template": "@vibedocs-engine/templates/discovery/qanda.md",
+            "document": "@.vibedocs/discovery/qanda.md",
+            "alias": "qanda",
+            "friendlyName": "Q&A Document"
+        },
+        {
+            "template": "@vibedocs-engine/templates/discovery/prd.md",
+            "document": "@.vibedocs/discovery/prd.md",
+            "alias": "prd",
+            "friendlyName": "Product Requirements Document"
+        },
+        {
+            "template": "@vibedocs-engine/templates/discovery/plan.md",
+            "document": "@.vibedocs/discovery/plan.md",
+            "alias": "projectplan",
+            "friendlyName": "Project Plan Document"
+        }
+    ]
+}

@@ -60,7 +60,7 @@ Vibedocs Script supports placeholders that pull from your configuration files (`
 |---------------------------------|-----------------------------------------------------------|
 | `{{documents.aliasname}}`       | Resolves to a document's metadata and path by alias name  |
 | `{{documents.alias.friendlyName}}` | Inserts the friendly display name for a document           |
-| `{{documents.alias.phase}}`         | Inserts the workflow phase (folder or stage)               |
+| `{{documents.alias.documentFolder}}`         | Inserts the workflow folder               |
 
 ---
 

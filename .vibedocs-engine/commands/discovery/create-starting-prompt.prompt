@@ -1,11 +1,31 @@
-<prompt id="start">
+<workflow id="discovery"/>
+
+<prompt id="createStructure">
+    
+    <if condition=".vibedocs/ folder does not exist at the root level of this project">
+
+        Create the following structure at the root level of this project:
+
+        .vibedocs
+            \discovery
+            \releases
+        
+        <agentsay rephrase="false">I created the vibedocs project structure.  Now moving on to the next step.</agentsay>
+        
+    </if>
+
+    <prompt id="createStartingPrompt" />
+        
+</prompt>
+
+<prompt id="createStartingPrompt">
 
         <agentinstructions>
             Create {{documents.starting-prompt}}
         </agentinstructions>
 
         <agentsay rephrase="true">
-            Great! I created the {{documents.starting-prompt.friendlyName}} in the {{documents.starting-prompt.phase}} folder. 
+            Great! I created the {{documents.starting-prompt.friendlyName}} in the 'discovery' folder. 
             Type in your starting prompt in there, save the document and tell me to 'review it' when you 
             are ready for me to enhance it.
         </agentsay>

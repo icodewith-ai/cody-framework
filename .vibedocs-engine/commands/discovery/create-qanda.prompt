@@ -1,3 +1,5 @@
+<workflow id="discovery"/>
+
 <prompt id="start">
 
         <agentinstructions>
@@ -9,7 +11,7 @@
         </agentinstructions>
 
         <agentsay rephrase="true">
-            I created the '{{documents.qanda.friendlyName}}' in the '{{documents.qanda.phase}}' with some questions based on 
+            I created the '{{documents.qanda.friendlyName}}' in the 'discovery' with some questions based on 
             the {{documents.starting-prompt.friendlyName}}.
 
             Please review it and answer the questions. If you have questions for me, feel free to add them to the document.

@@ -42,7 +42,7 @@ When you create documents using placeholders like `{{documents.aliasname}}`, fol
 - Use `aliasname` to identify which document config to reference.
 - Use `template` to determine which template to load and where it’s located.
 - Use `document` to know what file to create and where to store it.
-- Use `phase` to know what folder it belongs to.
+- Use `documentFolder` to know what folder it belongs to.
 - Use `friendlyName` to show a readable name back to the **USER**.
 
 ### Example
@@ -57,11 +57,11 @@ For the example below, you will:
 </agentinstructions>
 ```
 
-For this next example, use the `friendlyName` and `phase` fields to render a message to the **USER**:
+For this next example, use the `friendlyName` and `documentFolder` fields to render a message to the **USER**:
 
 ```xml
 <agentsay rephrase="true">
-    Great! I created the {{documents.starting-prompt.friendlyName}} in the {{documents.starting-prompt.phase}} folder. 
+    Great! I created the {{documents.starting-prompt.friendlyName}} in the {{documents.starting-prompt.documentFolder}} folder. 
     Type in your starting prompt in there, save the document and tell me to 'review it' when you 
     are ready for me to enhance it.
 </agentsay>

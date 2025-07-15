@@ -1,15 +1,19 @@
-<prompt id="start">
+<workflow id="discovery"/>
+
+<prompt id="createPlan">
 
         <agentinstructions>
-            - Create {{documents.prd}}.  
-            - Analyze {{documents.qanda}}
-            - Analyze {{documents.starting-prompt}} 
-            - Analyze any other relevant resources you need and generate a detailed Product Requirements Document (PRD).
-            - Update {{documents.prd}} with the information you gathered.
+            - Create {{documents.plan}}.
+            - If you need to analyze the following documents:
+                - {{documents.prd}}
+                - {{documents.qanda}}
+                - {{documents.starting-prompt}} 
+            - Analyze any other relevant resources you need and generate a detailed Plan document.
+            - Update {{documents.plan}} with the information you gathered.
         </agentinstructions>
 
         <agentsay rephrase="true">
-            I created the {{documents.prd.friendlyName}} in the {{documents.prd.phase}} folder. Please review it and and
+            I created the {{documents.plan.friendlyName}} in the 'discovery' folder. Please review it and and
             make any necessary updates to it.  Once you are done, save the document and let me know.
         </agentsay>
 
@@ -18,10 +22,10 @@
             <dountil condition="**USER** has said 'good to go' or something similar">
 
                 <agentinstructions>
-                    - Review {{documents.prd}}
+                    - Review {{documents.plan}}
                     - Make sure all sections are filled out with relevant information.
                     - If you need more information, ask the **USER** for details.
-                    - If you have questions, add them to the {{documents.prd}} document.
+                    - If you have questions, add them to the {{documents.plan}} document.
                 </agentinstructions>
 
                 <if condition="**AGENT** needs more detail">

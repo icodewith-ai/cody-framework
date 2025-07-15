@@ -1,0 +1,9 @@
+{
+  "steps": [
+    { "command": "discovery/initialize-project.prompt" },
+    { "command": "discovery/create-starting-prompt.prompt" },
+    { "command": "discovery/create-qanda.prompt" },
+    { "command": "discovery/create-prd.prompt" },
+    { "command": "discovery/create-plan.prompt" }
+  ]
+}

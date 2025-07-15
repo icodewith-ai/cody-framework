@@ -45,11 +45,11 @@ Documents to help define and formalize the product idea.
 
 | Document                   | Description                                                                      |
 | -------------------------- | -------------------------------------------------------------------------------- |
-| `01-starting-prompt.md` | Captures the raw, unfiltered idea or initial AI prompt that sparked the project. |
-| `02-questions-and-answers.md` | Refines the initial idea through a dialogue with AI, clarifying goals and scope. |
-| `03-prd.md` | Formalizes the idea into a Product Requirements Document. Defines what the product should do. |
-| `04-plan.md` | Defines how and when the product will be built and delivered. |
-| `05-feature-backlog.md` | A list of the main features you’ll need to build, based on your plan. This acts as your product backlog — you’ll pull from it when deciding what to include in each release. |
+| `starting-prompt.md` | Captures the raw, unfiltered idea or initial AI prompt that sparked the project. |
+| `questions-and-answers.md` | Refines the initial idea through a dialogue with AI, clarifying goals and scope. |
+| `prd.md` | Formalizes the idea into a Product Requirements Document. Defines what the product should do. |
+| `plan.md` | Defines how and when the product will be built and delivered. |
+| `feature-backlog.md` | A list of the main features you’ll need to build, based on your plan. This acts as your product backlog — you’ll pull from it when deciding what to include in each release. |
 
 ### Releases
 Detailed documentation for each release of the product.
