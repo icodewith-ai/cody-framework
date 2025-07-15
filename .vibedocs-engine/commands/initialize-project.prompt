@@ -1,0 +1,28 @@
+<prompt id="start">
+    
+    <if condition=".vibedocs/ folder exists at the root level of this project">
+
+        <agentsay rephrase="false">The .vibedocs folder already exists. Project is already initialized. What would you like to do next?</agentsay>
+        
+        <agentinstructions>Stop and wait for **USER** to reply</agentinstructions>
+
+        <if condition="**USER** says 'start project' or 'start'">
+             <nextstep />
+        </if>  
+
+    <else>
+
+        Create the following structure at the root level of this project:
+
+        .vibedocs
+            \discovery
+            \references
+            \releases
+        
+        <agentsay rephrase="false">I'm done! If you are ready to start the project, just say "start".</agentsay>
+        
+        <if condition="**USER** says 'start project' or 'start'">
+             <nextstep />
+        </if>
+        
+</prompt>

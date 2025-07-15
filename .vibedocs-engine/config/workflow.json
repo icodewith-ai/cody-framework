@@ -1,0 +1,24 @@
+{
+    "workflow": [
+        {
+            "command": "initialize-project.prompt",
+            "prompt": "start"
+        },
+        {
+            "command": "create-starting-prompt.prompt",
+            "prompt": "start"
+        },
+        {
+            "command": "create-qanda.prompt",
+            "prompt": "start`"
+        },
+        {
+            "command": "create-prd.prompt",
+            "prompt": "start`"
+        },
+        {
+            "command": "create-plan.prompt",
+            "prompt": "start`"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+<prompt id="start">
+
+        <agentinstructions>
+            - First create {{documents.qanda}}.  
+            - Then analyze the {{documents.starting-prompt}}.
+            - Fill out the {{documents.qanda}} with questions you have. Be sure to include questions that
+            are not answered in the starting prompt, such as technical details, UI/UX requirements, user stories,
+            and any other relevant information that will help you build a comprehensive understanding of the project.
+        </agentinstructions>
+
+        <agentsay rephrase="true">
+            I created the '{{documents.qanda.friendlyName}}' in the '{{documents.qanda.phase}}' with some questions based on 
+            the {{documents.starting-prompt.friendlyName}}.
+
+            Please review it and answer the questions. If you have questions for me, feel free to add them to the document.
+
+            Once you have answered the questions and saved the document, let me know by saying 'questions answered'.
+        </agentsay>
+
+        <if condition="**USER** said done or questions answered">
+
+            <dountil condition="**USER** has said 'good to go' or something similar">
+
+                <agentinstructions>
+                    Read the {{documents.qanda}} and make sure all
+                    questions are answered and you have enough information to proceed to
+                    the next step.  
+                    
+                    If not, ask the **USER** for more details.
+                </agentinstructions>
+
+                <if condition="**AGENT** needs more detail">
+
+                    <agentsay>
+                        I've read the document and have more questions or need more details. 
+                        Please review it.  When you have answered my questions, just tell me.
+                    </agentsays>
+
+                <else>
+
+                    <agentsay>
+                        I've read the document and it looks good. Let's proceed to the next step.
+                    </agentsay>
+
+                    <nextstep />
+
+                </if>
+            
+            </dountil>
+
+            <nextstep />
+
+        </if>
+    
+</prompt>

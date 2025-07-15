@@ -1,0 +1,48 @@
+<prompt id="start">
+
+        <agentinstructions>
+            - Create {{documents.plan}}.
+            - If you need to analyze the following documents:
+                - {{documents.prd}}
+                - {{documents.qanda}}
+                - {{documents.starting-prompt}} 
+            - Analyze any other relevant resources you need and generate a detailed Plan document.
+            - Update {{documents.plan}} with the information you gathered.
+        </agentinstructions>
+
+        <agentsay rephrase="true">
+            I created the {{documents.plan.friendlyName}} in the {{documents.plan.phase}} folder. Please review it and and
+            make any necessary updates to it.  Once you are done, save the document and let me know.
+        </agentsay>
+
+        <if condition="**USER** said done or something similar">
+
+            <dountil condition="**USER** has said 'good to go' or something similar">
+
+                <agentinstructions>
+                    - Review {{documents.plan}}
+                    - Make sure all sections are filled out with relevant information.
+                    - If you need more information, ask the **USER** for details.
+                    - If you have questions, add them to the {{documents.plan}} document.
+                </agentinstructions>
+
+                <if condition="**AGENT** needs more detail">
+
+                    <agentsay>
+                        I've read the document and need more details. 
+                        Please review it.  When you have answered my questions, just tell me.
+                    </agentsays>
+
+                <else>
+
+                    <nextstep />
+
+                </if>
+            
+            </dountil>
+
+            <nextstep />
+
+        </if>
+    
+</prompt>
