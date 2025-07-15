@@ -89,6 +89,3 @@ Say the exact content to the **USER**. If `rephrase="true"`, you may paraphrase 
 
 ### `<agentinstructions> ... </agentinstructions>`
 You must follow these instructions precisely. These blocks often contain operational logic (e.g., wait for user input, create documents, etc.).
-
-### `<execute command="filename" />`
-Load and execute the `.prompt` file located at `@vibedocs-engine/commands/[filename].prompt`. You must follow all instructions inside this external command template.
