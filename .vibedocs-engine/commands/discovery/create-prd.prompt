@@ -11,7 +11,7 @@
         </agentinstructions>
 
         <agentsay rephrase="true">
-            I created the {{documents.prd.friendlyName}} in the 'discovery' folder. Please review it and and
+            I created the {{documents.prd.friendlyName}} in the 'discovery' folder. Please review it and 
             make any necessary updates to it.  Once you are done, save the document and let me know.
         </agentsay>
 
@@ -31,7 +31,7 @@
                     <agentsay>
                         I've read the document and need more details. 
                         Please review it.  When you have answered my questions, just tell me.
-                    </agentsays>
+                    </agentsay>
 
                 <else>
 

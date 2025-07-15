@@ -14,7 +14,7 @@
         
     </if>
 
-    <prompt id="createStartingPrompt" />
+    <nextprompt id="createStartingPrompt" />
         
 </prompt>
 
@@ -41,10 +41,9 @@
 
                 <agentsay>
                     I've read the document and enhanced it with more details. 
-                    Please review it.  If you are happy with it, just tell me 'good to go'
-                    if you updated the document, I can review it again.  Just tell me to
-                    'review it again'.
-                </agentsays>
+                    Please review it.  If you're happy with it, just say 'good to go'. 
+                    If you made changes, tell me to 'review it again'.
+                </agentsay>
             
             </dountil>
 

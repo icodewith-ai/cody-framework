@@ -11,7 +11,7 @@
         </agentinstructions>
 
         <agentsay rephrase="true">
-            I created the '{{documents.qanda.friendlyName}}' in the 'discovery' with some questions based on 
+            I created the {{documents.qanda.friendlyName}} in the 'discovery' folder with some questions based on 
             the {{documents.starting-prompt.friendlyName}}.
 
             Please review it and answer the questions. If you have questions for me, feel free to add them to the document.
@@ -36,7 +36,7 @@
                     <agentsay>
                         I've read the document and have more questions or need more details. 
                         Please review it.  When you have answered my questions, just tell me.
-                    </agentsays>
+                    </agentsay>
 
                 <else>
 
