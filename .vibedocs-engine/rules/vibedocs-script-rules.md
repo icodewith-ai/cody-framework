@@ -2,96 +2,93 @@
 
 You are operating inside Vibedocs, a custom prompt-driven workflow system using **Vibedocs Script**, designed for structured document authoring. Vibedocs Script is a lightweight, tag-based instruction format, based on XML, parsed and executed from top to bottom, file to file.
 
-## Basic rules for execution.
+## Basic Rules for Execution
 
-- You will follow the instructions carefully and fully in each .prompt file.
-- You will accomplish your tasks by using all the available tools you have access to.
-- `<prompt> ... </prompt>` represents a distinct step in the template, which may involve interacting with the user, updating a document, or analyzing content.
-- A template may have multiple `<prompt>` blocks.  Each block will be assigned an `id`.
-- Vibedocs Script supports conditionals, looping, flow control, and template-based document creation.  See Supported tags below.
+- You must follow the instructions carefully and fully in each `.prompt` file.
+- You must accomplish your tasks by using all available tools at your disposal.
+- `<prompt> ... </prompt>` represents a distinct step in the template. Each block may involve interacting with the **USER**, updating a document, or analyzing content.
+- Templates may contain multiple `<prompt>` blocks. Each block will have an `id`.
+- You support conditionals, looping, flow control, and template-based document creation. See the Supported Tags section below.
 
 ## File Explanations
 
 ### @vibedocs-engine/config/workflow.json
-The workflow configuration file can be used by the **AGENT** to understand the workflow steps between .prompt files and to resolve which step is next when the `<nextstep />` tag is used.  Steps are executed top to bottom, in the `"steps"` array.
+This workflow configuration file defines the overall flow. You must use this file to determine the order of execution between `.prompt` files, especially when encountering the `<nextstep />` tag. Execute steps top to bottom based on the `"steps"` array.
 
 ### @vibedocs-engine/config/documents.json
-The **AGENT** can the documents configuration file to resolve any {{documents.}} calls in prompts (see Placeholder values below)
+You can use this file to resolve any `{{documents.}}` placeholders in prompts. It also contains all document metadata you need during creation or display.
 
 ## Reserved Keywords
 
-These keywords act as special signals to the AI agent. They are not replaced by values. Instead, they signal roles, audiences, or responsibilities to the AI agent (e.g., who is taking action or being addressed).  Keywords are UPPERCASE and enclosed by **.
+These keywords act as special signals for you, the **AGENT**. They represent roles or responsibilities. Do not replace these — they are instructions or signals.
 
 | Keyword      | Definition                                                                 | Example Usage                                                       |
 |--------------|---------------------------------------------------------------------------|----------------------------------------------------------------------|
-| `**USER**`     | Represents the human using the AI assistant. This is who the AI is helping. | Ask the **USER** to review the document and signal when they’re done. |
-| `**AGENT**` | Represents the AI itself, responsible for reading, analyzing, and writing. | Tell the **AGENT** to enhance the prompt and rewrite the document. |
+| `**USER**`   | The human you're assisting. Your job is to help the **USER**.             | Ask the **USER** to review the document and signal when they’re done. |
+| `**AGENT**`  | Refers to you — responsible for reading, analyzing, and writing.          | Tell the **AGENT** to enhance the prompt and rewrite the document.   |
 
 ## Placeholder Values
 
-These placeholders are dynamically replaced at runtime with values that can be found in the @vibedocs-engine/config/workflows.json file.
+These placeholders are dynamically replaced at runtime with values found in the `workflow.json` or `documents.json` config files.
 
-| Placeholder             | Description                                                                  | Source Location                            | Example Usage                                                            |
-|-------------------------|------------------------------------------------------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
-| `{{documents.aliasname}}`    | Refers to a named markdown file to use as a starting template.               | `workflow.json` → `documents.{template}` (template to use) `workflow.json` → `documents.{document}` (document to create) `workflow.json` → `documents.{aliasname}` (how to find this document)       | Create {{documents.qanda}} would create the document.name.                    |
+| Placeholder                   | Description                                                                  | Source Location | Example Usage |
+|-------------------------------|------------------------------------------------------------------------------|------------------|----------------|
+| `{{documents.aliasname}}`     | Refers to a named markdown file to use as a starting template.               | `documents.json` → `documents` array | `Create {{documents.qanda}}` will create the associated `document` as defined. |
 
-## Creating documents
-- When an **ANGENT** creates documents using placeholder {{document.}}, look at the @vibedocs-engine/config/documents.json file.
-- Look at the `aliasname` to resolve which document to create.
-- Look at the `template` to resolve which template to use and where it's located.
-- Look at the `document` to resolve which document to create and where to store it.
-- Look at the `phase` to see which phase / folder it belongs to.
-- Look at the `friendlyName` to see what to use as the friendly name when displaying back to the **USER**.
+## Creating Documents
 
-### Examples
+When you create documents using placeholders like `{{documents.aliasname}}`, follow these rules:
 
-> For the example below, the **AGENT** will look at documents.json, in documents array, for the `aliasname` of `starting-prompt`.  Once you find it, you will use the `template` to create the `document`.
-````
-        <agentinstructions>
-            Create {{documents.starting-prompt}}
-        </agentinstructions>
-````
+- Use `aliasname` to identify which document config to reference.
+- Use `template` to determine which template to load and where it’s located.
+- Use `document` to know what file to create and where to store it.
+- Use `phase` to know what folder it belongs to.
+- Use `friendlyName` to show a readable name back to the **USER**.
 
-> For the example below, the **AGENT** will look at documents.json, in documents array, for the `aliasname` of `starting-prompt`.  Once you find it, you will replace the `friendlyName` and `phase` with the actual values in those attributes and display that to the **USER**
+### Example
 
-````
-        <agentsay rephrase="true">
-            Great! I created the {{documents.starting-prompt.friendlyName}} in the {{documents.starting-prompt.phase}} folder. 
-            Type in your starting prompt in there, save the document and tell me to 'review it' when you 
-            are ready for me to enhance it.
-        </agentsay>
-````
+For the example below, you will:
+- Find `starting-prompt` in the `documents.json` array using the `aliasname`.
+- Use the `template` to create the document at the `document` path.
+
+```xml
+<agentinstructions>
+    Create {{documents.starting-prompt}}
+</agentinstructions>
+```
+
+For this next example, use the `friendlyName` and `phase` fields to render a message to the **USER**:
+
+```xml
+<agentsay rephrase="true">
+    Great! I created the {{documents.starting-prompt.friendlyName}} in the {{documents.starting-prompt.phase}} folder. 
+    Type in your starting prompt in there, save the document and tell me to 'review it' when you 
+    are ready for me to enhance it.
+</agentsay>
+```
 
 ## Vibedocs Script Supported Tags
 
-### `<prompt id="..."> </prompt>`
+### `<prompt id="..."> ... </prompt>`
+Defines a distinct step within a `.prompt` file. Use `id` to name and reference this step.
 
-Prompts are created using this tag.  The ID represents the name of this prompt that can be used with other tags to jump between prompts in the same template or to other templates.
-
-### `<nextprompt id="" />`  
-
-Moves execution to the next prompt with the given `id` in the same template.
+### `<nextprompt id="..." />`
+Jumps to another `<prompt>` within the same file by ID.
 
 ### `<nextstep />`
+Signals that the current document workflow is complete. You must consult `workflow.json` to determine and execute the next step in the `steps` array.
 
-Signals that the current document's workflow is complete and the **AGENT** should move to the next .prompt file, which can be found in the @vibedocs-engine/workflow.json file.steps array.
-
-### `<if condition="..."> ... <elseif> ... <else> ... </if>`  
-
-Evaluates the condition. Works like any other if statement in any language.
+### `<if condition="..."> ... <elseif> ... <else> ... </if>`
+Evaluate the condition and follow appropriate logic blocks.
 
 ### `<dountil condition="..."> ... </dountil>`
+Repeat the inner block until the condition is satisfied.
 
-Repeats the inner block until a user-defined condition is met.
-
-### `<agentsay rephrase="false"> ... </agentsays>`
-
-Anything in between the tags, the **AGENT** will say to the **USER**.  If the attribute `rephrase` is set to `true`, the **AGENT** can optinally rephrase what was written.  If it's set to `false` or does not exist, **AGENT** must say it exactly as written.
+### `<agentsay rephrase="false"> ... </agentsay>`
+Say the exact content to the **USER**. If `rephrase="true"`, you may paraphrase or reword the message if needed.
 
 ### `<agentinstructions> ... </agentinstructions>`
-
-These are instructions the **AGENT** must take.  For example, you may want the **AGENT** to stop and wait for the **USER** to repond before continuing. The **AGENT** will tend to tell the user what's it's doing.
+You must follow these instructions precisely. These blocks often contain operational logic (e.g., wait for user input, create documents, etc.).
 
 ### `<execute command="filename" />`
-
-The **AGENT** will read and follow all the rules and commands in this specific prompt template, which is located in `@vibedocs-engine/commands/[command].prompt` The `command` attribute stores the name of the command file, without .prompt extension. 
+Load and execute the `.prompt` file located at `@vibedocs-engine/commands/[filename].prompt`. You must follow all instructions inside this external command template.
