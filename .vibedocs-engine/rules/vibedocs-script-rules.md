@@ -10,6 +10,7 @@ You are operating inside Vibedocs, a custom prompt-driven workflow system using 
 - Templates may contain multiple `<prompt>` blocks. Each block will have an `id`.
 - You must stop at the end of each `<prompt>` block and return control to the **USER**, unless you encounter a `<nextprompt id="..." />` or `<nextstep />` tag.
 - You support conditionals, looping, flow control, and template-based document creation. See the Supported Tags section below.
+- If you encounter a `<nextstep />` tag and there are no more steps remaining in the `workflow.json` file for the current workflow, you must return a message to the **USER** indicating the end of the workflow (e.g., "You've reached the end of the workflow.").
 
 ## File Explanations
 
@@ -97,7 +98,7 @@ Defines a distinct step within a `.prompt` file. Use `id` to name and reference 
 Jumps to another `<prompt>` within the same file by ID.
 
 ### `<nextstep />`
-Signals that the current document workflow is complete. You must consult the correct `workflow.json` based on the active `<workflow id="..."/>` value to determine and execute the next step in the `steps` array.
+Signals that the current document workflow is complete. You must consult the correct `workflow.json` based on the active `<workflow id="..."/>` value to determine and execute the next step in the `steps` array. If there are no more steps remaining, inform the **USER** that they have reached the end of the workflow.
 
 ### `<if condition="..."> ... <elseif> ... <else> ... </if>`
 Evaluate the condition and follow appropriate logic blocks.
