@@ -3,17 +3,17 @@
 <prompt id="createPlan">
 
     <agentinstructions>
-        - Create {{documents.plan}}.
+        - Create {{documents.projectplan}}.
         - If you need to analyze the following documents:
             - {{documents.prd}}
             - {{documents.qanda}}
             - {{documents.starting-prompt}} 
         - Analyze any other relevant resources you need and generate a detailed Plan document.
-        - Update {{documents.plan}} with the information you gathered.
+        - Update {{documents.projectplan}} with the information you gathered.
     </agentinstructions>
 
     <agentsay rephrase="true">
-        I created the {{documents.plan.friendlyName}} in the 'discovery' folder. Please review it and 
+        I created the {{documents.projectplan.friendlyName}} in the 'discovery' folder. Please review it and 
         make any necessary updates to it. Once you are done, save the document and let me know.
     </agentsay>
 
@@ -22,10 +22,10 @@
         <dountil condition="**USER** has said 'good to go' or something similar">
 
             <agentinstructions>
-                - Review {{documents.plan}}
+                - Review {{documents.projectplan}}
                 - Make sure all sections are filled out with relevant information.
                 - If you need more information, ask the **USER** for details.
-                - If you have questions, add them to the {{documents.plan}} document.
+                - If you have questions, add them to the {{documents.projectplan}} document.
             </agentinstructions>
 
             <if condition="**AGENT** needs more detail">

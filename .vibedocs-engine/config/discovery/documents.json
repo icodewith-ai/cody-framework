@@ -19,8 +19,8 @@
             "friendlyName": "Product Requirements Document"
         },
         {
-            "template": "@vibedocs-engine/templates/discovery/plan.md",
-            "document": "@.vibedocs/discovery/plan.md",
+            "template": "@vibedocs-engine/templates/discovery/project-plan.md",
+            "document": "@.vibedocs/discovery/project-plan.md",
             "alias": "projectplan",
             "friendlyName": "Project Plan Document"
         }

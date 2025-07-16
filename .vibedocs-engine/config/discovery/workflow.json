@@ -4,6 +4,6 @@
     { "command": "discovery/create-starting-prompt.prompt" },
     { "command": "discovery/create-qanda.prompt" },
     { "command": "discovery/create-prd.prompt" },
-    { "command": "discovery/create-plan.prompt" }
+    { "command": "discovery/create-project-plan.prompt" }
   ]
 }
