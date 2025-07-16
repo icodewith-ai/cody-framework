@@ -2,12 +2,14 @@
 
 <prompt id="createStructure">
     
-    <if condition=".vibedocs/ folder does not exist at the root level of this project">
+    <if condition="vibedocs/ folder does not exist at the root level of this project">
 
         Create the following structure at the root level of this project:
 
-        .vibedocs
+        vibedocs
             \discovery
+            \memory-management
+            \reference-library
             \releases
         
         <agentsay rephrase="false">I created the vibedocs project structure.  Now moving on to the next step.</agentsay>

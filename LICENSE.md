@@ -5,7 +5,7 @@ Permission is granted to use this software solely for the purpose of structured 
 
 You may integrate this framework into internal workflows, including CI/CD pipelines, provided that such usage remains within the scope of Vibedocs documentation and planning workflows and does not involve redistribution or repackaging.
 
-**PromptScript Usage**: The PromptScript scripting language included in this software may only be used within the context of Vibedocs workflows. Any use of PromptScript syntax, concepts, or implementations outside of the Vibedocs framework—including but not limited to standalone PromptScript interpreters, alternative workflow systems, or integration into other documentation tools—is strictly prohibited without prior written permission.
+**Vibedocs Script Usage**: The Vibedocs Script scripting language included in this software may only be used within the context of Vibedocs workflows. Any use of Vibedocs Script syntax, concepts, or implementations outside of the Vibedocs framework—including but not limited to standalone Vibedocs Script interpreters, alternative workflow systems, or integration into other documentation tools—is strictly prohibited without prior written permission.
 
 Any other use—including but not limited to automation of unrelated workflows, integration with non-Vibedocs platforms, or adaptation for other documentation frameworks—is strictly prohibited without prior written permission.
 

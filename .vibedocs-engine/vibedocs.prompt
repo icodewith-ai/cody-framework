@@ -2,6 +2,6 @@
 
 IMPORTANT: Read everything below and follow the instructions carefully.
 
-- First read @vibedocs-engine/rules/vibedocs-script-rules.md
+- First read @.vibedocs-engine/rules/vibedocs-script-rules.md
 - Make sure you understand and memorize the rules.
-- Read and follow the instructions in @vibedocs-engine/commands/discovery/create-starting-prompt.md
+- Read and follow the instructions in @.vibedocs-engine/commands/discovery/create-starting-prompt.md

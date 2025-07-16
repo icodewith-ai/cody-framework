@@ -24,11 +24,11 @@ Vibedocs is designed specifically for **solo creators**—especially those pract
 
 Vibedocs is available as a **Model Context Protocol (MCP) Server**, enabling seamless IDE integration and interaction with AI tools. It connects with IDEs like Claude Code, Cursor, and Visual Studio Code through MCP connectors, allowing in-context interaction directly inside development environments.
 
-## Powered by PromptScript
+## Powered by Vibedocs Script
 
-Vibedocs is powered by **PromptScript**, a lightweight, human-readable scripting format that defines structured, step-by-step AI workflows, created [by Marcelo Lewin](https://www.bymarcelolewin.com). PromptScript combines simple XML-like tags with natural language to guide AI assistants through prompt execution, branching logic, conditionals, and iterative refinement — all tied to dynamic project documents.
+**Vibedocs Script** is a lightweight, tag-based scripting language designed for structured document workflows. It is inspired by XML and used to guide AI agents (referred to as **AGENT**) in performing tasks such as prompting users, generating content, managing flow control, and creating documents.
 
-[Learn more about PromptScript](.vibedocs/reference-library/promptscript-reference.md)
+[Learn more about Vibedocs Script](./documentation/vibedocs-script-reference.md)
 
 ## Document Format
 

@@ -14,11 +14,11 @@ You are operating inside Vibedocs, a custom prompt-driven workflow system using 
 
 ## File Explanations
 
-### `@vibedocs-engine/config/<workflow-id>/workflow.json`
+### `@.vibedocs-engine/config/<workflow-id>/workflow.json`
 
 This workflow configuration file defines the ordered flow of `.prompt` files for a specific phase (e.g., `discovery`, `releases`). You must use this file to determine the order of execution between `.prompt` files, especially when encountering the `<nextstep />` tag. Execute steps top to bottom based on the `"steps"` array.
 
-### `@vibedocs-engine/config/<workflow-id>/documents.json`
+### `@.vibedocs-engine/config/<workflow-id>/documents.json`
 
 This file provides all document metadata for the current phase. You must use it to resolve any `{{documents.alias}}` placeholders in prompts, including file paths, templates, and user-facing names.
 
@@ -26,7 +26,7 @@ This file provides all document metadata for the current phase. You must use it 
 
 At the top of each `.prompt` file (excluding root-level commands), you will find a `<workflow id="..." />` tag. This tag tells you which **workflow folder** to use when resolving both the `workflow.json` and `documents.json` files. The value of the `id` attribute corresponds to the folder name under:
 
-- `@vibedocs-engine/config/<workflow-id>/`
+- `@.vibedocs-engine/config/<workflow-id>/`
 
 You must use the `<workflow id="..."/>` value consistently for:
 
@@ -41,8 +41,8 @@ For example:
 
 Tells you to:
 
-- Use `@vibedocs-engine/config/discovery/workflow.json`
-- Use `@vibedocs-engine/config/discovery/documents.json`
+- Use `@.vibedocs-engine/config/discovery/workflow.json`
+- Use `@.vibedocs-engine/config/discovery/documents.json`
 
 ## Reserved Keywords
 
