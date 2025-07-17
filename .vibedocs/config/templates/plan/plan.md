@@ -1,4 +1,5 @@
 # Product Implementation Plan
+This document defines how the product will be built and when.
 
 ## Section Explanations
 | Section                  | Overview |
@@ -16,53 +17,44 @@
 ## Overview
 _A quick summary of what this plan is for and what product it's implementing._
 
-**[AGENT TODO: Add overview]**
+**[AI AGENT TODO: Add overview]**
 
 ## Architecture
 _High-level structure and major technical decisions. Include how the system is organized (e.g., client-server, monolith, microservices) and the proposed tech stack (frameworks, languages, storage, deployment)._
 
-**[AGENT TODO: Describe the architecture and proposed tech stack.]**
+**[AI AGENT TODO: Describe the architecture and proposed tech stack.]**
 
 ## Components
 _What are the key parts/modules of the system and what do they do?_
 
-- **[AGENT TODO: Add component 1]**
-- **[AGENT TODO: Add component 2]**
-- **[AGENT TODO: Add component 3]**
+- **[AI AGENT TODO: Add component 1]**
 
 ## Data Model
 _What are the main types of data or objects the system will manage?_
 
-- **[AGENT TODO: Describe data model 1]**
-- **[AGENT TODO: Describe data model 2]**
+- **[AI AGENT TODO: Describe data model 1]**
 
 ## Major Technical Steps
 _What are the major technical steps required to implement this product? Keep the tasks high-level and milestone-focused (e.g., "Build user input form," not "Write handleInput() function"). These will guide the AGENT or dev team in breaking down the work further._
 
-- **[AGENT TODO: Add task 1]**
-- **[AGENT TODO: Add task 2]**
-- **[AGENT TODO: Add task 3]**
+- **[AI AGENT TODO: Add task 1]**
 
 ## Tools & Services
 _What tools, APIs, or libraries will be used?_
 
-- **[AGENT TODO: List tool/service 1]**
-- **[AGENT TODO: List tool/service 2]**
+- **[AI AGENT TODO: List tool/service 1]**
 
 ## Risks & Unknowns
 _What might block us, or what needs more investigation?_
 
-- **[AGENT TODO: Add risk or unknown 1]**
-- **[AGENT TODO: Add risk or unknown 2]**
+- **[AI AGENT TODO: Add risk or unknown 1]**
 
-## Milestones (Optional)
+## Milestones
 _What are the major implementation phases or delivery checkpoints?_
 
-- **[AGENT TODO: Add milestone 1]**
-- **[AGENT TODO: Add milestone 2]**
+- **[AI AGENT TODO: Add milestone 1]**
 
-## Environment Setup (Optional)
+## Environment Setup
 _What setup steps are needed to start development or run the app?_
 
-- **[AGENT TODO: Add setup step 1]**
-- **[AGENT TODO: Add setup step 2]**
+- **[AI AGENT TODO: Add setup step 1]**

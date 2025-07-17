@@ -1,4 +1,5 @@
 # Product Requirements Document (PRD)
+This document formalizes the idea and defines the what and the why of the product the USER is building.
 
 ## Section Explanations
 | Section           | Overview |
@@ -16,55 +17,44 @@
 ## Summary
 _A 1–2 sentence high-level description of the product or feature._
 
-**[AGENT TODO: Add summary]**
+**[AI AGENT TODO: Add summary]**
 
 ## Goals
 _What are we trying to achieve? List the key objectives or outcomes._
 
-- **[AGENT TODO: Add goal 1]**
-- **[AGENT TODO: Add goal 2]**
-- **[AGENT TODO: Add goal 3]**
+- **[AI AGENT TODO: Add goal 1]**
 
 ## Target Users
 _Who is this for? Briefly describe the audience._
 
-**[AGENT TODO: Describe the primary users of this product]**
+**[AI AGENT TODO: Describe the primary users of this product]**
 
 ## Key Features
 _What core features are required to meet the goals?_
 
-- **[AGENT TODO: Add key feature 1]**
-- **[AGENT TODO: Add key feature 2]**
-- **[AGENT TODO: Add key feature 3]**
+- **[AI AGENT TODO: Add key feature 1]**
 
 ## Success Criteria
 _How do we know it worked?_
 
-- **[AGENT TODO: Add success metric 1]**
-- **[AGENT TODO: Add success metric 2]**
-- **[AGENT TODO: Add success metric 3]**
+- **[AI AGENT TODO: Add success metric 1]**
 
 ## Out of Scope (Optional)
 _What won't be included in the first version?_
 
-- **[AGENT TODO: Add out-of-scope item 1]**
-- **[AGENT TODO: Add out-of-scope item 2]**
+- **[AI AGENT TODO: Add out-of-scope item 1]**
 
 ## User Stories (Optional)
 _What does the user want to accomplish? Keep these high-level to focus on user goals, not implementation details._
 
-- **[AGENT TODO: Add user story 1]**
-- **[AGENT TODO: Add user story 2]**
-- **[AGENT TODO: Add user story 3]**
+- **[AI AGENT TODO: Add user story 1]**
 
-## Assumptions (Optional)
+## Assumptions
 _What are we assuming to be true when building this?_
 
-- **[AGENT TODO: Add assumption 1]**
-- **[AGENT TODO: Add assumption 2]**
+- **[AI AGENT TODO: Add assumption 1]**
 
-## Dependencies (Optional)
+## Dependencies
 _What systems, tools, or teams does this depend on?_
 
-- **[AGENT TODO: Add dependency 1]**
-- **[AGENT TODO: Add dependency 2]**
+- **[AI AGENT TODO: Add dependency 1]**
