@@ -1,10 +1,7 @@
-# Vibedocs Developer Reference Guide
-
-## Overview
-
+# Vibedocs
 Vibedocs is a structured development methodology that brings organization and repeatability to the creative process of "vibe coding." It guides developers from vague ideas to well-defined, versioned feature implementations without stifling creativity.
 
-Want to skip evrything and just get started?  [Click here](#getting-started).
+You can skip directly to the ["Installing and Using It"](#installing-and-using-it) section to get started right away.
 
 ## Core Philosophy
 
@@ -104,9 +101,8 @@ You can call the Vibedocs commands either by typing out the entire word (`vibedo
 │   ├── prd.md
 │   └── plan.md
 └── work/
-    ├── feature-backlog.md      # Master feature list
-    └── releases/
-        └── v[x.y.z]-[name]/    # Version-specific folders
+    ├── feature-backlog.md     # Master feature list
+    └── v[x.y.z]-[name]/       # Version-specific folders
             ├── design.md
             ├── tasklist.md
             └── retrospective.md
@@ -146,7 +142,7 @@ You can call the Vibedocs commands either by typing out the entire word (`vibedo
 - Use the AI agent to explore alternative approaches
 - Review successful past releases for patterns to repeat
  
-## Getting Started
+## Installing and Using It
 
 Vibedocs can be easily added to any project by following these steps:
 
