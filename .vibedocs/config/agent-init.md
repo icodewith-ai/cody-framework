@@ -174,4 +174,9 @@ Starts the WORK phase and creates the feature backlog.
 - Tell the USER to review the tasklist.md document in the current version and when they are done, to tell you.
 - Stop and wait for the USER to tell you to continue.
 
+# ************
+# CODING TIME!
+# ************
+- Ask the user which phase or task they would like to start working on.
+- Steop here.
 ````

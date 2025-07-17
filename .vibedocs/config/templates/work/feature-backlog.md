@@ -2,7 +2,7 @@
 
 This document lists features and enhancements derived from the plan. It is a living document that will evolve throughout the project. It is grouped by release, with the Backlog tracking all features not added to a release yet.  It is used to create releases to work on.
 
-**[AI AGENT TODO: Create features in the tables below based on the plan.md and prd.md and group them by releases.  If a feature is not in a release, add them to the backlog table.  For each release, add a status from the status table below.  All new releases have a Not Started status]**
+**[AI AGENT TODO: Create features in the tables below based on the plan.md and prd.md and group them by releases.  If a feature is not in a release, add them to the backlog table.  For each release, add a status from the status table below.  Make sure you use both the emoji and label of the status.  All new releases have a Not Started status]**
 
 | Status |  | Priority |  |
 |--------|-------------|---------|-------------|

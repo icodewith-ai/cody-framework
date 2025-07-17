@@ -1,88 +1,166 @@
-# Vibedocs
+# Vibedocs Developer Reference Guide
 
-Vibedocs brings structure and repeatability to the unstructured world of vibe coding by guiding users from vague ideas to well-defined, versioned feature implementations. It guides users from the initial idea through discovery, PRD creation, feature planning, task breakdown, and final implementation.
+## Overview
 
-## Problem Statement
+Vibedocs is a structured development methodology that brings organization and repeatability to the creative process of "vibe coding." It guides developers from vague ideas to well-defined, versioned feature implementations without stifling creativity.
 
-Vibe coding has revolutionized how solo developers and creators brainstorm, prototype, and build MVPs, proof-of-concepts or even full products using AI. It enables rapid iteration, experimentation, and idea validation—all without the overhead of traditional development workflows.
+Want to skip evrything and just get started?  [Click here](#getting-started).
 
-But this speed comes at a cost.
+## Core Philosophy
 
-Most vibe coders leap directly from idea to implementation, using AI to generate code without first clarifying goals, defining scope, or documenting intent. The result is often fragmented output, inconsistent structure, and products that are hard to maintain, improve, or scale.
+Vibedocs bridges the gap between unstructured ideation and systematic development by providing:
+- **Structure without rigidity**: Templates and phases that guide without constraining
+- **Iterative refinement**: Built-in feedback loops between human and AI
+- **Version-based development**: Manageable chunks of work organized by releases
+- **Living documentation**: Documents that evolve with your project
 
-What's missing is a lightweight yet structured process that complements the spontaneity of vibe coding. A system that channels creative energy into organized artifacts—like PRDs, feature plans, and task breakdowns—so AI can generate more meaningful, coherent, and context-aware outputs.
+## Two-Phase Development Cycle
 
-## Who is it For?
+### Phase 1: Plan
+The planning phase transforms raw ideas into actionable development plans through three key documents:
 
-Vibedocs is designed specifically for **solo creators**—especially those practicing vibe coding, where rapid ideation and prompt-based development are central. It's optimized for:
+#### 1. Discovery Document (`discovery.md`)
+- **Purpose**: Captures the raw, unfiltered initial idea
+- **Process**: Interactive Q&A between developer and AI to refine understanding
+- **Output**: Clear project vision and requirements
 
-- One-person workflows
-- Exploratory coding sessions
-- Fast prototyping with structure
+#### 2. Product Requirements Document (`prd.md`)
+- **Purpose**: Formalizes "the what and the why" of your product
+- **Sections**: Summary, Goals, Target Users, Key Features, Success Criteria, User Stories, Assumptions, Dependencies
+- **Output**: Structured product definition
 
-## How is it Accessible?
+#### 3. Implementation Plan (`plan.md`)
+- **Purpose**: Defines "how and when" the product will be built
+- **Sections**: Architecture, Components, Data Model, Technical Steps, Tools & Services, Risks, Milestones, Environment Setup
+- **Output**: Technical roadmap and implementation strategy
 
-Vibedocs is available as a **Model Context Protocol (MCP) Server**, enabling seamless IDE integration and interaction with AI tools. It connects with IDEs like Claude Code, Cursor, and Visual Studio Code through MCP connectors, allowing in-context interaction directly inside development environments.
+### Phase 2: Work
+The work phase breaks development into manageable, versioned releases:
 
-## Powered by Vibedocs Script
+#### Feature Backlog (`feature-backlog.md`)
+- **Purpose**: Central repository of all features derived from the plan
+- **Organization**: Features grouped by release with priority and status tracking
+- **Status Types**: 🔴 Not Started, 🟡 In Progress, 🟢 Completed
+- **Priority Levels**: High, Medium, Low
 
-**Vibedocs Script** is a lightweight, tag-based scripting language designed for structured document workflows. It is inspired by XML and used to guide AI agents (referred to as **AGENT**) in performing tasks such as prompting users, generating content, managing flow control, and creating documents.
+#### Release Documents (per version)
+Each release gets its own folder with three documents:
 
-[Learn more about Vibedocs Script](./documentation/vibedocs-script-reference.md)
+1. **Design Document (`design.md`)**
+   - Technical implementation guide for the release
+   - Architecture overview and implementation notes
+   - Open questions and considerations
 
-## Document Format
+2. **Task List (`tasklist.md`)**
+   - Detailed breakdown of work organized by phases
+   - Task tracking with status and priority
+   - Actionable development items
 
-All documents are stored in **Markdown format** (`.md`), ensuring:
+3. **Retrospective (`retrospective.md`)**
+   - Post-release reflection and lessons learned
+   - What worked well vs. what could improve
+   - Action items for future releases
 
-- Easy reading and editing in any IDE
-- Compatibility with Git and other version control systems
-- Future-proof formatting for rendering in a web UI or static site generator
+## Version Naming Convention
 
-## Document Workflows
+Vibedocs uses semantic versioning with descriptive names:
+- **Format**: `v[major.minor.patch]-[name]`
+- **Example**: `v1.0.3-refactor-code`
+- **Rules**:
+  - Starting version: `v0.1.0` (unless specified)
+  - Names: max 30 characters, lowercase, dashes only
+  - Auto-increment unless user specifies version
+  - Name is optional
 
-### Discovery
-Documents to help define and formalize the product idea.
+## Command Reference
+You can call the Vibedocs commands either by typing out the entire word (`vibedocs [command]`) or the shortcut (`!vd [command]`).
 
-| Document                   | Description                                                                      |
-| -------------------------- | -------------------------------------------------------------------------------- |
-| `starting-prompt.md` | Captures the raw, unfiltered idea or initial AI prompt that sparked the project. |
-| `questions-and-answers.md` | Refines the initial idea through a dialogue with AI, clarifying goals and scope. |
-| `prd.md` | Formalizes the idea into a Product Requirements Document. Defines what the product should do. |
-| `plan.md` | Defines how and when the product will be built and delivered. |
-| `feature-backlog.md` | A list of the main features you’ll need to build, based on your plan. This acts as your product backlog — you’ll pull from it when deciding what to include in each release. |
+| Command | Description |
+|---------|-------------|
+| `vibedocs help` or `!vd help` | Displays overview and available commands |
+| `vibedocs plan` or `!vd plan` | Starts the planning phase:<br>1. Creates folder structure (`/plan`, `/work`, `/work/releases`)<br>2. Initiates discovery document creation and iteration<br>3. Generates PRD based on discovery insights<br>4. Creates implementation plan from PRD<br>5. Prepares for work phase |
+| `vibedocs work` or `!vd work` | Starts the work phase:<br>1. Creates feature backlog from implementation plan<br>2. Organizes features by release<br>3. Sets up for version-based development |
+| `vibedocs work version` or `!vd work version` | Begins work on a specific version:<br>1. Shows available versions from backlog<br>2. Creates version folder with proper naming<br>3. Generates design document<br>4. Creates task list<br>5. Initiates development cycle |
 
-### Releases
-Detailed documentation for each release of the product.
+## File Structure
 
-| Document           | Development Phase  | Description                                                        |
-| ------------------ | ------------------ | ------------------------------------------------------------------ |
-| `01-starting-prompt.md` | Before | Describes the focus and scope of this release based on the feature backlog in the discovery phase. |
-| `02-questions-and-answers.md` | Before | Refines the starting prompt through a dialog with AI, clarifying and enhancing the original prompt. |
-| `03-plan.md` | Before | Describes, in detail, how to go about implementing this release. |
-| `04-tasklist.md` | During | Lists tasks to be completed for the release. |
-| `05-release-notes.md` | After | Summarizes new features, enhancements, fixes, and changes. |
-| `06-retrospective.md` | After | Records what went well, what could be improved, and key decisions. |
+```
+.vibedocs/
+├── config/
+│   ├── agent-init.md           # AI agent instructions
+│   └── templates/
+│       ├── plan/               # Planning phase templates
+│       │   ├── discovery.md
+│       │   ├── prd.md
+│       │   └── plan.md
+│       └── work/               # Work phase templates
+│           ├── feature-backlog.md
+│           └── version/
+│               ├── design.md
+│               ├── tasklist.md
+│               └── retrospective.md
+├── plan/                       # Generated planning documents
+│   ├── discovery.md
+│   ├── prd.md
+│   └── plan.md
+└── work/
+    ├── feature-backlog.md      # Master feature list
+    └── releases/
+        └── v[x.y.z]-[name]/    # Version-specific folders
+            ├── design.md
+            ├── tasklist.md
+            └── retrospective.md
+```
 
-### Reference Library 
-Independent documents created on-demand to capture technical knowledge about the product. These are informed by project documentation and other internal or external sources.
+## Best Practices
 
-| Document           | Description                                                        |
-| ------------------ | ------------------------------------------------------------------ |
-| `content-management.md` | Outlines how content is structured, authored, reviewed, and published across the product. |
-| `css.md` | Documents styling decisions, CSS frameworks used, naming conventions, and reusable patterns  |
-| `folder-structure.md` | Describes the organization of the codebase, key directories, and their responsibilities.|
-| `functional-breakdown.md` | Breaks the product into its major functional components and user-facing capabilities.|
-| `javascript.md` | Covers JavaScript structure, helper functions, libraries used, and coding conventions.|
-| `tech-stack.md` | Lists and explains the core technologies used across the frontend, backend, tooling, and infrastructure.|
+### For Planning Phase
+- **Be thorough in discovery**: The Q&A process is crucial for project success
+- **Iterate on documents**: Don't rush through - refine until satisfied
+- **Think modularly**: Break complex ideas into manageable components
+- **Consider dependencies early**: Identify external requirements upfront
 
-## Expected Outcomes
+### For Work Phase
+- **Start small**: Begin with foundational features in early releases
+- **Maintain the backlog**: Keep it updated as requirements evolve
+- **Regular retrospectives**: Learn from each release to improve the next
+- **Version strategically**: Group related features into logical releases
 
-By using Vibedocs, solo creators can expect:
-- More relevant AI output, thanks to rich context and structured prompts
-- Versioned, repeatable releases that can evolve over time
-- Faster iteration with reusable planning artifacts like tasklists and PRDs
-- Improved handoff and memory — even for solo devs coming back months later
-- Better alignment between vision, implementation, and documentation
+### For AI Collaboration
+- **Provide context**: The more detail in discovery, the better the AI assistance
+- **Review generated content**: AI creates drafts - you refine and approve
+- **Ask questions**: Use the AI to explore edge cases and considerations
+- **Iterate freely**: The process is designed for multiple rounds of refinement
+
+## Troubleshooting
+
+### Common Issues
+- **Stuck in planning**: Set time limits for each document iteration
+- **Overwhelming backlog**: Focus on next 2-3 releases, keep others high-level
+- **Version scope creep**: Use the design document to maintain focus
+- **Skipping retrospectives**: These are crucial for continuous improvement
+
+### Getting Unstuck
+- Return to the discovery document to reconnect with core vision
+- Break large features into smaller, more manageable pieces
+- Use the AI agent to explore alternative approaches
+- Review successful past releases for patterns to repeat
+ 
+## Getting Started
+
+Vibedocs can be easily added to any project by following these steps:
+
+### Installation
+1. **Download from GitHub**: Clone or download Vibedocs from https://github.com/icodewith-ai/vibedocs
+2. **Copy configuration**: Only copy the `.vibedocs` folder into your project's root directory
+3. **Initialize the AI agent**: Ask your AI assistant to "Read .vibedocs/config/agent-init.md". This will inform the AI agent of the rules it must follow for Vibedocs.
+
+### Using It
+Once installed, you can use these commands with your AI assistant to kick start the process:
+- **`!vd help`**: Displays all available commands and how to use them
+- **`!vd plan`**: Starts the planning phase, creating necessary documents and guiding you through the discovery process
+
+Vibedocs works with any development environment (IDE) that has built in tools for file management.
 
 ## License
 
