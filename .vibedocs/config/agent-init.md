@@ -3,8 +3,11 @@
 - Make sure you check this document often if you need to understand how to process any vibedocs commands.
 - Anything that has **[AI AGENT TODO: to do item]** means you need to take action.
 - After every phase, make sure you re-read this document.
-- If this is the first time this file was accessed in this project, execute the COMMAND: !vd help
+- If this is the first time this file was accessed in this project, execute the COMMAND: :vd help
 - {{placeholders}} used in commands are defined in this document, under the "Template Placeholder Values" section.  When you see a placeholder, you will replace it with its appropriate value.
+- The roles are as follows:
+    - **USER** Is the human guding you.
+    - **AGENT** That's you!  The AI.
 
 ## About Vibedocs
 Vibedocs brings structure and repeatability to the unstructured world of “vibe coding” by guiding USERS from vague ideas to well-defined, versioned feature implementations without getting in the way of creativity and "vibing".
@@ -55,12 +58,16 @@ These placeholders are a pointer to actual values. They are created here and use
 | {{vdTemplates}} | .vibedocs/config/templates | Vibedocs templates folder |
 | {{vdPlanPhase}} | .vibedocs/plan | Vibedocs root folder for the planning phase. |
 | {{vdWorkPhase}} | .vibedocs/work | Vibedocs root folder for the work phase. |
+| {{vdAssets}} | .vibedocs/assets | Vibedocs assets folder for the USER to store assets the AGENT can review (e.g. diagrams, images, etc). |
+
+##  :ASSETS in USER Prompts and What the AGENT Should Do
+The USER at times may want to tell the AGENT about a particular file that they need to review as part of their prompt. For example, the USER may state something like "Check out the database.png file in the :ASSETS folder". If the USER uses in any of their prompts :ASSETS, the AGENT needs to look in the {{vdAssets}} for that file.  If it does not find it, it should tell the user that it was not found and give a list of all the files found in the {{vdAssets}} folder.
 
 ## Executing Commands
 
 If the USER types any of these commands, follow the instructions for those commands.
 
-> ###  `vibedocs help` | `!vd help` 
+> ###  `vibedocs help` | `:vd help` 
 > Provides the USER with help about Vibedocs
 
 **[AI AGENT TODO: perform the following]** 
@@ -71,10 +78,12 @@ Welcome to Vibedocs by iCodeWith.ai
 
 - Provide the USER with a short overview of Vibedocs.
 - Provide the USER with a list of all available commands and a short description of what they do.
+- Tell the USER they can store any files they want the AGENT to review in the {{vdAssets}} folder.
+- Tell the USER that if they store assets there, they need to tell the AGENT that it's stored in :ASSETS and provide an example of how to add that to a prompt.
 - Stop here.
 ````
 
-> ### `vibedocs plan` | `!vd plan`
+> ### `vibedocs plan` | `:vd plan`
 > Creates a vibedocs project and starts the PLAN phase.
 
 **[AI AGENT TODO: perform the following]** 
@@ -120,11 +129,11 @@ Welcome to Vibedocs by iCodeWith.ai
 # ***************
 # PLAN PHASE ENDS
 # ***************
-- Tell the USER the phase has ended and if they want to start working, they can just type !vd work to create the feature backlog.
+- Tell the USER the phase has ended and if they want to start working, they can just type :vd work to create the feature backlog.
 - Stop here.
 ````
 
-> ### `vibedocs work` or `!vd work`
+> ### `vibedocs work` or `:vd work`
 > Starts the WORK phase and creates the feature backlog. 
 
 **[AI AGENT TODO: perform the following]** 
@@ -138,13 +147,20 @@ Welcome to Vibedocs by iCodeWith.ai
 # CREATE FEATURE BACKLOG 
 # (skip this if you already did it)
 # **********************************
-- Copy from {{vdTemplates}}/work/feature-backlog.md into {{vdWorkPhase}}
-- Review the plan.md document you created in the discovery phase, then generate and update the feature-backlog.md document.
-- When you are done, tell the USER to review it.   Also tell them they can type 'vibedocs work version' to start working on a version.
-- Stop here.
+- Check that {{vdTemplates}}/work/feature-backlog.md does not exist.  
+    If it does not:
+        - Copy from {{vdTemplates}}/work/feature-backlog.md into {{vdWorkPhase}}
+        - Review the plan.md document you created in the discovery phase, then generate and update the feature-backlog.md document.
+        - When you are done, tell the USER to review it.   Also tell them they can type 'vibedocs work version' to start working on a version.
+        - Stop here.
+    If it does:
+        - Tell the USER that work has already started.
+        - Tell the USER that the Feature Backlog already exists.
+        - Tell the USER they can work on a version next.
+        - Stop here.
 ````
 
-> ### `vibedocs work version` or `!vd work version`
+> ### `vibedocs work version` or `:vd work version`
 > Creates a release (version) using the feature-backlog.md file.  The USER will pick which release to work on.
 
 ````
@@ -184,9 +200,27 @@ Welcome to Vibedocs by iCodeWith.ai
 - Tell the USER to review the tasklist.md document in the current version and when they are done, to tell you.
 - Stop and wait for the USER.
 
-# ************
-# CODING TIME!
-# ************
+# **********************
+# CHOOSE WHAT TO WORK ON 
+# **********************
 - Ask the USER which task or phase in the tasklist.md file they would like to start working on.
-- Stop here.
+- Stop here and wait for USER to tell you.
+
+# ***********
+# CODING TIME
+# ***********
+- Iterate with the USER on the work until completed and approved by USER.
+- Encourage the USER, as each phase is completed, to commit to git.
+- Once completed, ask USER what to work on next.
+- Iterate until all phases for the version are completed.
+
+# *****************
+# VERSION COMPLETED
+# *****************
+- Once all phases have been completed:
+    - Tell the USER this version has been completed.
+    - Update {{vdWorkPhase}}/feature-backlog.md with completed version.
+    - Copy from {{vdTemplates}}/work/version/retrospective.md to the current version folder.
+    - Update the retrospective.md file.
+    - Tell the USER what you have done and ask them what to do next.
 ````
