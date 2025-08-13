@@ -96,9 +96,10 @@ Welcome to Vibedocs by iCodeWith.ai
 # ***********************
 # CREATE FOLDER STRUCTURE
 # ***********************
-- create the following folder structure in {{vdRoot}}
+- create the following folder structure in {{vdRoot}} only if it does not exist already.
 /plan
 /work
+/assets
 
 # *************************
 # CREATE DISCOVERY DOCUMENT
