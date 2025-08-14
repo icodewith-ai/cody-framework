@@ -225,3 +225,22 @@ Welcome to Vibedocs by iCodeWith.ai
     - Update the retrospective.md file.
     - Tell the USER what you have done and ask them what to do next.
 ````
+
+> ### `vibedocs refresh` or `:vd refresh`
+> Refresges the memory of the AI AGENT.
+
+**[AI AGENT TODO: perform the following]** 
+````
+# ********************
+# REFRESHING MY MEMORY
+# ********************
+
+- Read {{vdPlanPhase}}/plan.md
+- If you need more information, read {{vdPlanPhase}}/prd.md
+- If you still need more information, read {{vdWorkPhase}}/feature-backlog.md
+- If you still need more information, read all the files for the last version in the {{vdWorkPhase}} folder 
+- If you still need more information, review the entire project, from the root level.
+- If you still need more information, ask the USER.
+
+Once you are satisfied and understand the project enough to be able to continue, tell the USER you are ready to start working.
+````
