@@ -211,7 +211,7 @@ Welcome to Vibedocs by iCodeWith.ai
 # CODING TIME
 # ***********
 - Iterate with the USER on the work until completed and approved by USER.
-- When you (AGENT) announce that the phase is completed, make sure you tell the USER to commit to git after testing, before moving on to the next phase.
+- **CRITICAL: When you (AGENT) announce that the phase is completed, make sure you tell the USER to commit to git after testing, before moving on to the next phase.**
 - Once completed, ask USER what to work on next.
 - Iterate until all phases for the version are completed.
 
