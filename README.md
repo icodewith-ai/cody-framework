@@ -149,12 +149,12 @@ Vibedocs can be easily added to any project by following these steps:
 ### Installation
 1. **Download from GitHub**: Clone or download Vibedocs from https://github.com/icodewith-ai/vibedocs
 2. **Copy configuration**: Only copy the `.vibedocs` folder into your project's root directory
-3. **Initialize the AI agent**: Ask your AI assistant to "Read .vibedocs/config/agent-init.md". This will inform the AI agent of the rules it must follow for Vibedocs.
+3. **Initialize the AI agent**: Ask your AI assistant to "Read .vibedocs/config/vd-activate.md". This will inform the AI agent of the rules it must follow for Vibedocs.
 
 ### Using It
 Once installed, you can use these commands with your AI assistant to kick start the process:
-- **`!vd help`**: Displays all available commands and how to use them
-- **`!vd plan`**: Starts the planning phase, creating necessary documents and guiding you through the discovery process
+- **`:vd help`**: Displays all available commands and how to use them
+- **`:vd plan`**: Starts the planning phase, creating necessary documents and guiding you through the discovery process
 
 Vibedocs works with any development environment (IDE) that has built in tools for file management.
 

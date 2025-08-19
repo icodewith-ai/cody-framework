@@ -2,6 +2,8 @@
 description: Creates a new release (version) not in the feature-backlog.md file.
 ---
 
+- Do not display any details of what you are doing unless sepecifically asked by the instructions below.
+
 # *******************
 # ADD NEW VERSION
 # *******************

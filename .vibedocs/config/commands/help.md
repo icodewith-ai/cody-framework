@@ -6,6 +6,7 @@ description: Provides the USER with help about Vibedocs.
 Welcome to Vibedocs by iCodeWith.ai
 **************************************
 
+- Do not display any details of what you are doing unless sepecifically asked by the instructions below.
 - Provide the USER with a short overview of Vibedocs.
 - Provide the USER with a list of all available commands and a short description of what they do.
 - Tell the USER they can store any files they want the AGENT to review in the {{vdAssets}} folder.

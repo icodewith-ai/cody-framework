@@ -2,6 +2,8 @@
 description: Creates a vibedocs project and starts the PLAN phase.
 ---
 
+- Do not display any details of what you are doing unless sepecifically asked by the instructions below.
+
 # ****************
 # PLAN PHASE START
 # ****************

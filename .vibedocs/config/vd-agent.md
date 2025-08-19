@@ -49,7 +49,7 @@ This phase guides USERS through the iterative development cycle by creating docu
 - If the USER didn't provide a name for the release, skip the -[name]
 
 ## Template Placeholder Values
-These placeholders are a pointer to actual values. They are created here and used throughout various commands.  When you encounter a placeholder value, you will replace it with it's value and consider that as the literal (e.g. {{vdConfig}}/agent-init.md would translate to .vibedocs/config/agent-init.md)
+These placeholders are a pointer to actual values. They are created here and used throughout various commands.  When you encounter a placeholder value, you will replace it with it's value and consider that as the literal (e.g. {{vdConfig}}/vd-agent.md would translate to .vibedocs/config/vd-agent.md)
 
 | Placeholder | Maps to | Description |
 |------------|---------|-------------|
@@ -94,7 +94,7 @@ The USER at times may want to tell the AGENT about a particular file that they n
 **[AI AGENT TODO: Read and execute {{vdCommands}}/refresh.md]** 
 
 > ### `:vd relearn`
-> It forces the AI AGENT to read again the Vibedocs agent-ini file to check for any updates.
+> It forces the AI AGENT to read again the Vibedocs vd-agent file to check for any updates.
 **[AI AGENT TODO: Read and execute {{vdCommands}}/relearn.md]** 
 
 > ### `:vd assets list`
