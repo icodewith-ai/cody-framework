@@ -56,6 +56,7 @@ These placeholders are a pointer to actual values. They are created here and use
 | {{vdRoot}} | .vibedocs/ | Vibedocs root folder |
 | {{vdConfig}} | .vibedocs/config/ | Vibedocs configuration folder |
 | {{vdTemplates}} | .vibedocs/config/templates | Vibedocs templates folder |
+| {{vdCommands}} | .vibedocs/config/commands | Vibedocs commands to be executed. |
 | {{vdPlanPhase}} | .vibedocs/plan | Vibedocs root folder for the planning phase. |
 | {{vdWorkPhase}} | .vibedocs/work | Vibedocs root folder for the work phase. |
 | {{vdAssets}} | .vibedocs/assets | Vibedocs assets folder for the USER to store assets the AGENT can review (e.g. diagrams, images, etc). |
@@ -65,282 +66,37 @@ The USER at times may want to tell the AGENT about a particular file that they n
 
 ## Executing Commands
 
-If the USER types any of these commands, follow the instructions for those commands.
+- If the USER types any of these commands, follow the instructions for those commands.
+- If you (AGENT) are reading this file to get familiar (or re-familiarize yourself) with it, please make sure you read all the files in the {{vdCommands}} folder.
 
-> ###  `vibedocs help` | `:vd help` 
+> ###  `:vd help` 
 > Provides the USER with help about Vibedocs
+**[AI AGENT TODO: Read and execute {{vdCommands}}/help.md ]** 
 
-**[AI AGENT TODO: perform the following]** 
-````
-**************************************
-Welcome to Vibedocs by iCodeWith.ai
-**************************************
-
-- Provide the USER with a short overview of Vibedocs.
-- Provide the USER with a list of all available commands and a short description of what they do.
-- Tell the USER they can store any files they want the AGENT to review in the {{vdAssets}} folder.
-- Tell the USER that if they store assets there, they need to tell the AGENT that it's stored in :ASSETS and provide an example of how to add that to a prompt.
-- Stop here.
-````
-
-> ### `vibedocs plan` | `:vd plan`
+> ### `:vd plan`
 > Creates a vibedocs project and starts the PLAN phase.
+**[AI AGENT TODO: Read and execute {{vdCommands}}/plan.md]** 
 
-**[AI AGENT TODO: perform the following]** 
-````
-# ****************
-# PLAN PHASE START
-# ****************
-
-
-# ***********************
-# CREATE FOLDER STRUCTURE
-# ***********************
-- create the following folder structure in {{vdRoot}} only if it does not exist already.
-/plan
-/work
-/assets
-
-# *************************
-# CREATE DISCOVERY DOCUMENT
-# *************************
-- Copy from {{vdTemplates}}/plan/discovery.md into {{vdPlanPhase}}
-- Tell the USER to open that document, updated it, save it and tell you that they are done.
-- When the USER tells you they are done, you will review the document.
-- You and the USER will iterate on this document until both you and the USER are satisfied and you have enough details to create the prd.
-- Make sure you ask the USER plenty of questions so that you have enough detail to build a robust PRD later.
-
-
-# *******************
-# CREATE PRD DOCUMENT
-# *******************
-- Once you are both ready to move on, you will copy from {{vdTemplates}}/plan/prd.md into {{vdPlanPhase}}
-- You will review the discovery.md document and use it to generate and update the prd.md in the document you just copied.
-- You and the USER will iterate on the PRD until you're both happy with it.
-
-
-# ********************
-# CREATE PLAN DOCUMENT
-# ********************
-- Once you and the USER are ready to move on, you will copy from {{vdTemplates}}/plan/plan.md into {{vdPlanPhase}}
-- You will review the prd.md document and use it to generate and update the plan.md document you just copied.
-- You and the USER will iterate on the plan until you're both happy with it.
-
-
-# ***************
-# PLAN PHASE ENDS
-# ***************
-- Tell the USER the phase has ended and if they want to start working, they can just type :vd work to create the feature backlog.
-- Stop here.
-````
-
-> ### `vibedocs work` or `:vd work`
+> ### `:vd work`
 > Starts the WORK phase and creates the feature backlog. 
+**[AI AGENT TODO: Read and execute {{vdCommands}}/work.md]** 
 
-**[AI AGENT TODO: perform the following]** 
-````
-# ****************
-# WORK PHASE START
-# ****************
-
-
-# **********************************
-# CREATE FEATURE BACKLOG 
-# (skip this if you already did it)
-# **********************************
-- Check that {{vdTemplates}}/work/feature-backlog.md does not exist.  
-    If it does not:
-        - Copy from {{vdTemplates}}/work/feature-backlog.md into {{vdWorkPhase}}
-        - Review the plan.md document you created in the discovery phase, then generate and update the feature-backlog.md document.
-        - When you are done, tell the USER to review it.   Also tell them they can type 'vibedocs work version' to start working on a version.
-        - Stop here.
-    If it does:
-        - Tell the USER that work has already started.
-        - Tell the USER that the Feature Backlog already exists.
-        - Tell the USER they can work on a version next.
-        - Stop here.
-````
-
-> ### `vibedocs work version` or `:vd work version`
+> ### `:vd version work`
 > Creates a release (version) using the feature-backlog.md file.  The USER will pick which release to work on.
+**[AI AGENT TODO: Read and execute {{vdCommands}}/version-work.md]** 
 
-````
-# *******************
-# WORK PHASE CONTINUE
-# *******************
-
-
-# *************************
-# CHOOSE VERSION TO WORK ON
-# *************************
-- Show the USER a list of versions available from the {vdWorkPhase}feature-backlog.md file that have a Status of "Not Started" or "In Progress"
-- Ask the USER which version they would like to work on.
-
-
-# *********************
-# CREATE VERSION FOLDER
-# *********************
-- Create the version folder, using the version name from the selected version, but make sure you convert that name to follow the 'Release Version Naming Convention' section rules in this document.
-
-
-# ************************
-# GENERATE DESIGN DOCUMENT
-# ************************
-- Copy the design.md template from {{vbTemplates}}/work/version/design.md to the version folder you just created.
-- Generate and update the design.md document with details from the version the USER chose to work on.
-- Tell the USER to check the design.md document in the current version.
-- Tell the USER to announce when they are done.
-- Stop and wait for the USER.
-
-
-# *****************
-# GENERATE TASKLIST
-# *****************
-- Copy the tasklist.md template from {{vdTemplates}}/work/version/tasklist.md to the version folder you just created.
-- Create and generate the tasklist.md document using any of the previous documents created as reference.
-- Tell the USER to review the tasklist.md document in the current version and when they are done, to tell you.
-- Stop and wait for the USER.
-
-# **********************
-# CHOOSE WHAT TO WORK ON 
-# **********************
-- Ask the USER which task or phase in the tasklist.md file they would like to start working on.
-- Stop here and wait for USER to tell you.
-
-# ***********
-# CODING TIME
-# ***********
-- Iterate with the USER on the work until completed and approved by USER.
-- **CRITICAL: When you (AGENT) announce that the phase is completed, make sure you tell the USER to commit to git after testing, before moving on to the next phase.**
-- Once completed, ask USER what to work on next.
-- Iterate until all phases for the version are completed.
-
-# *****************
-# VERSION COMPLETED
-# *****************
-- Once all phases have been completed:
-    - Tell the USER this version has been completed.
-    - Update {{vdWorkPhase}}/feature-backlog.md with completed version.
-    - Copy from {{vdTemplates}}/work/version/retrospective.md to the current version folder.
-    - Update the retrospective.md file.
-    - Tell the USER what you have done and ask them what to do next.
-````
-
-> ### `vibedocs add version` or `:vd add version`
+> ### `:vd version add`
 > Creates a new release (version) not in the feature-backlog.md file.
+**[AI AGENT TODO: Read and execute {{vdCommands}}/version-add.md]** 
 
-````
-# *******************
-# ADD NEW VERSION
-# *******************
-
-
-# *********************
-# CREATE VERSION FOLDER
-# *********************
-- Ask the USER what's the version number and name.
-- Wait for USER to tell you.
-- Create new version folder in {{vdWorkPhase}}.
-
-# *********************
-# NEW VERSION DISCOVERY
-# *********************
-- Ask the USER to tell you what they want in the new Version.  Tell them to be as detailed as possible.
-- Wait for USER to tell you.  Ask as many questions as you need.  Iterate here until you are satisfied.
-- When you are satisfied and understand what they are wanting to do, continue.
-
-# ************************
-# GENERATE DESIGN DOCUMENT
-# ************************
-- Copy the design.md template from {{vbTemplates}}/work/version/design.md to the version folder you just created.
-- Generate and update the design.md document with details from your conversation in the previous step.
-- Tell the USER to check the design.md document in the current version.
-- Tell the USER to announce when they are done.
-- Stop and wait for the USER.
-
-# *****************
-# GENERATE TASKLIST
-# *****************
-- Copy the tasklist.md template from {{vdTemplates}}/work/version/tasklist.md to the version folder you just created.
-- Create and generate the tasklist.md document using any of the previous documents created as reference.
-- Tell the USER to review the tasklist.md document in the current version and when they are done, to tell you.
-- Stop and wait for the USER.
-
-# **********************************
-# ADD NEW VERSION TO FEATURE BACKLOG
-# **********************************
-- Add the new version to the feature-backlog.md file in {{vdWorkPhase}}
-
-
-# **********************
-# CHOOSE WHAT TO WORK ON 
-# **********************
-- Ask the USER which task or phase in the tasklist.md file they would like to start working on.
-- Stop here and wait for USER to tell you.
-
-# ***********
-# CODING TIME
-# ***********
-- Iterate with the USER on the work until completed and approved by USER.
-- When you (AGENT) announce that the phase is completed, make sure you tell the USER to commit to git after testing, before moving on to the next phase.
-- Once completed, ask USER what to work on next.
-- Iterate until all phases for the version are completed.
-
-# *****************
-# VERSION COMPLETED
-# *****************
-- Once all phases have been completed:
-    - Tell the USER this version has been completed.
-    - Update {{vdWorkPhase}}/feature-backlog.md with completed version.
-    - Copy from {{vdTemplates}}/work/version/retrospective.md to the current version folder.
-    - Update the retrospective.md file.
-    - Tell the USER what you have done and ask them what to do next.
-````
-
-> ### `vibedocs refresh` or `:vd refresh`
+> ### `:vd refresh`
 > Refreshes the memory about the current project of the AI AGENT.
+**[AI AGENT TODO: Read and execute {{vdCommands}}/refresh.md]** 
 
-**[AI AGENT TODO: perform the following]** 
-````
-# ********************
-# REFRESHING MY MEMORY
-# ********************
-
-- Read {{vdPlanPhase}}/plan.md
-- If you need more information, read {{vdPlanPhase}}/prd.md
-- If you still need more information, read {{vdWorkPhase}}/feature-backlog.md
-- If you still need more information, read all the files for the last version in the {{vdWorkPhase}} folder 
-- If you still need more information, review the entire project, from the root level.
-- If you still need more information, ask the USER.
-
-Once you are satisfied and understand the project enough to be able to continue, tell the USER you are ready to start working.
-````
-
-> ### `vibedocs learn` or `:vd learn`
+> ### `:vd relearn`
 > It forces the AI AGENT to read again the Vibedocs agent-ini file to check for any updates.
+**[AI AGENT TODO: Read and execute {{vdCommands}}/relearn.md]** 
 
-- Re-read this entire document (agent-init.md), just in case something changed.  Follow instructions exactly as stated.  Commit this document to memory.
-
-> ### `vibedocs assets` or `:vd assets`
-> Refresges the memory of the AI AGENT.
-
-**[AI AGENT TODO: perform the following]** 
-````
-# ***************
-# LIST ALL ASSETS
-# ***************
-
-- Tell the USER that you are listing all the assets available in the {{vdAssets}} folder.
-- List all the assets available in the {{vdAssets}} folder.
-- Provide any details you know about each asset next to it. 
-- Do not provide the information in a table format.  Provide it as follows:
-
-Here are your current assets in the {{vdAssets}} folder:
-----------------
-[filename]
-[description]
-----------------
-[filename]
-[description]
-
-````
+> ### `:vd assets list`
+> Lists all the files stored in the assets folder, along with their known descriptions of what they are used for.
+**[AI AGENT TODO: Read and execute {{vdCommands}}/assets-list.md]** 
