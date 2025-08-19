@@ -226,25 +226,6 @@ Welcome to Vibedocs by iCodeWith.ai
     - Tell the USER what you have done and ask them what to do next.
 ````
 
-> ### `vibedocs refresh` or `:vd refresh`
-> Refresges the memory of the AI AGENT.
-
-**[AI AGENT TODO: perform the following]** 
-````
-# ********************
-# REFRESHING MY MEMORY
-# ********************
-
-- Read {{vdPlanPhase}}/plan.md
-- If you need more information, read {{vdPlanPhase}}/prd.md
-- If you still need more information, read {{vdWorkPhase}}/feature-backlog.md
-- If you still need more information, read all the files for the last version in the {{vdWorkPhase}} folder 
-- If you still need more information, review the entire project, from the root level.
-- If you still need more information, ask the USER.
-
-Once you are satisfied and understand the project enough to be able to continue, tell the USER you are ready to start working.
-````
-
 > ### `vibedocs add version` or `:vd add version`
 > Creates a new release (version) not in the feature-backlog.md file.
 
@@ -317,7 +298,7 @@ Once you are satisfied and understand the project enough to be able to continue,
 ````
 
 > ### `vibedocs refresh` or `:vd refresh`
-> Refreshes the memory of the AI AGENT.  Rechecks the agent-init.md file for any changes.
+> Refreshes the memory about the current project of the AI AGENT.
 
 **[AI AGENT TODO: perform the following]** 
 ````
@@ -325,17 +306,20 @@ Once you are satisfied and understand the project enough to be able to continue,
 # REFRESHING MY MEMORY
 # ********************
 
-- Re-read this entire document (agent-init.md), just in case something changed.
-If the USER passed --agent, skip all of this:
-    - Read {{vdPlanPhase}}/plan.md
-    - If you need more information, read {{vdPlanPhase}}/prd.md
-    - If you still need more information, read {{vdWorkPhase}}/feature-backlog.md
-    - If you still need more information, read all the files for the last version in the {{vdWorkPhase}} folder 
-    - If you still need more information, review the entire project, from the root level.
-    - If you still need more information, ask the USER.
+- Read {{vdPlanPhase}}/plan.md
+- If you need more information, read {{vdPlanPhase}}/prd.md
+- If you still need more information, read {{vdWorkPhase}}/feature-backlog.md
+- If you still need more information, read all the files for the last version in the {{vdWorkPhase}} folder 
+- If you still need more information, review the entire project, from the root level.
+- If you still need more information, ask the USER.
 
 Once you are satisfied and understand the project enough to be able to continue, tell the USER you are ready to start working.
 ````
+
+> ### `vibedocs learn` or `:vd learn`
+> It forces the AI AGENT to read again the Vibedocs agent-ini file to check for any updates.
+
+- Re-read this entire document (agent-init.md), just in case something changed.  Follow instructions exactly as stated.  Commit this document to memory.
 
 > ### `vibedocs assets` or `:vd assets`
 > Refresges the memory of the AI AGENT.
