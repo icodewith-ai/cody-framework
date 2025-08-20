@@ -1,4 +1,5 @@
 ---
+command: `:vd version work`
 description: Creates a release (version) using the feature-backlog.md file.  The USER will pick which release to work on.
 ---
 

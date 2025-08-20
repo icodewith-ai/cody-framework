@@ -1,4 +1,5 @@
 ---
+command: `:vd version add`
 description: Creates a new release (version) not in the feature-backlog.md file.
 ---
 

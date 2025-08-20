@@ -1,7 +1,9 @@
 # Release Tasklist – **[AI AGENT TODO: Add version number / name]**
 This document outlines all the tasks to work on to delivery this particular version, grouped by phases.
 
-**[AI AGENT TODO: Create a table for each phase and add all the tasks in that phase. As you accomplish each task, you will update this document's status accordingly.]**
+**[AI AGENT TODO: Create a table for each phase and add all the tasks in that phase.]**
+**[AI AGENT TODO: CRITICAL: As you accomplish each task, you will update this document's status accordingly.]**
+**[AI AGENT TODO: CRITICAL: Double check all the tasks to make sure there are not duplicates.]**
 
 | Status |      |
 |--------|------|

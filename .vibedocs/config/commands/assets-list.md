@@ -1,4 +1,5 @@
 ---
+command: `:vd assets list`
 description: Lists all the files stored in the assets folder, along with their known descriptions of what they are used for.
 ---
 

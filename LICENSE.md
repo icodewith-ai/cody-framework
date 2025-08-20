@@ -1,4 +1,4 @@
-# Vibedocs License v0.0.1 – July 2025
+# Vibedocs License
 Copyright (c) 2025 Red Pill Blue Pill Studios, LLC and Marcelo Lewin
 
 Permission is granted to use this software solely for the purpose of structured documentation workflows and AI-assisted development planning using the Vibedocs framework.

@@ -1,4 +1,8 @@
 # Vibedocs
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+[![License](https://img.shields.io/badge/license-Custom-green)](LICENSE.md)
+
 Vibedocs is a structured development methodology that brings organization and repeatability to the creative process of "vibe coding." It guides developers from vague ideas to well-defined, versioned feature implementations without stifling creativity.
 
 You can skip directly to the ["Installing and Using It"](#installing-and-using-it) section to get started right away.

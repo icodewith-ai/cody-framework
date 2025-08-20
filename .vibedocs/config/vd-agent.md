@@ -93,6 +93,10 @@ The USER at times may want to tell the AGENT about a particular file that they n
 > Refreshes the memory about the current project of the AI AGENT.
 **[AI AGENT TODO: Read and execute {{vdCommands}}/refresh.md]** 
 
+> ### `:vd refresh update`
+> Refreshes the memory about the current project of the AI AGENT and the AGENT will update the plan.md and prd.md files with any changes.
+**[AI AGENT TODO: Read and execute {{vdCommands}}/refresh-update.md]** 
+
 > ### `:vd relearn`
 > It forces the AI AGENT to read again the Vibedocs vd-agent file to check for any updates.
 **[AI AGENT TODO: Read and execute {{vdCommands}}/relearn.md]** 
