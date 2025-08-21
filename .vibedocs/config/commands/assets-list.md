@@ -7,7 +7,7 @@ description: Lists all the files stored in the assets folder, along with their k
 # LIST ALL ASSETS
 # ***************
 
-- Do not display any details of what you are doing unless sepecifically asked by the instructions below.
+- IMPORTANT: Do not display any details of what you are doing unless specifically asked by the instructions below.
 - Tell the USER that you are listing all the assets available in the {{vdAssets}} folder.
 - List all the assets available in the {{vdAssets}} folder.
 - Provide any details you know about each asset next to it. 

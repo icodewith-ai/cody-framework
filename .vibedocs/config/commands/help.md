@@ -7,7 +7,7 @@ description: Provides the USER with help about Vibedocs.
 Welcome to Vibedocs by iCodeWith.ai
 **************************************
 
-- Do not display any details of what you are doing unless sepecifically asked by the instructions below.
+- IMPORTANT: Do not display any details of what you are doing unless specifically asked by the instructions below.
 - Provide the USER with a short overview of Vibedocs.
 - Provide the USER the current version of Vibedocs.  You can get that from the "version" key in {{vdConfig}}/vdconfig.json.
 - Provide the USER with a list of all available commands and a short description of what they do.
