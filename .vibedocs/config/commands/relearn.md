@@ -1,5 +1,5 @@
 ---
-command: `:vd relearn`
+command: ":vd relearn"
 description: It forces the AI AGENT to read again the Vibedocs vd-agent file to check for any updates.
 ---
 

@@ -1,5 +1,5 @@
 ---
-command: `:vd refresh`
+command: ":vd refresh"
 description: Refreshes the memory about the current project of the AI AGENT.
 ---
 

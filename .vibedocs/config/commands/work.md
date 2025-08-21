@@ -1,5 +1,5 @@
 ---
-command: `:vd work`
+command: ":vd work"
 description: Starts the WORK phase and creates the feature backlog. 
 ---
 

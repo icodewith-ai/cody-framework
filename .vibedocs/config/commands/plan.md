@@ -1,5 +1,5 @@
 ---
-command: `:vd plan`
+command: ":vd plan"
 description: Creates a vibedocs project and starts the PLAN phase.
 ---
 

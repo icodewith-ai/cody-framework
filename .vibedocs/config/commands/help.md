@@ -1,5 +1,5 @@
 ---
-command: `:vd help`
+command: ":vd help"
 description: Provides the USER with help about Vibedocs.
 ---
 

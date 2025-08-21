@@ -1,5 +1,5 @@
 ---
-command: `:vd refresh update`
+command: ":vd refresh update"
 description: Refreshes the memory about the current project of the AI AGENT and the AGENT will update the plan.md and prd.md files with any changes.
 ---
 
