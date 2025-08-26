@@ -1,8 +1,8 @@
 # Feature Backlog
 
-This document lists features and enhancements derived from the plan. It is a living document that will evolve throughout the project. It is grouped by release, with the Backlog tracking all features not added to a release yet.  It is used to create releases to work on.
+This document lists features and enhancements derived from the plan. It is a living document that will evolve throughout the project. It is grouped by version, with the Backlog tracking all features not added to a version yet.  It is used to create versions to work on.
 
-**[AI AGENT TODO: Create features in the tables below based on the plan.md and prd.md and group them by releases.  If a feature is not in a release, add them to the backlog table.  For each release, add a status from the status table below.  Make sure you use both the emoji and label of the status.  All new releases have a Not Started status]**
+**[AI AGENT TODO: Create features in the tables below based on the plan.md and prd.md and group them by versions.  If a feature is not in a version, add them to the backlog table.  For each version, add a status from the status table below.  Make sure you use both the emoji and label of the status.  All new versions have a Not Started status]**
 
 | Status |  | Priority |  |
 |--------|-------------|---------|-------------|
@@ -17,8 +17,8 @@ This document lists features and enhancements derived from the plan. It is a liv
 |-----|---------------------|-------------------------------------------|----------|--------|
 | [id] | [Feature Name]   | [Feature Description]            | [Priority]   | [Status]  |
 
-## [Add Release] - [status]
-[Add a short description, no more than a sentence here about this release.]
+## [Add Version] - [status]
+[Add a short description, no more than a sentence here about this version.]
 
 | ID  | Feature                 | Description                              | Priority | Status |
 |-----|-------------------------|------------------------------------------|----------|--------|

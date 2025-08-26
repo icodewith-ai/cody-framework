@@ -1,4 +1,4 @@
-# Release Tasklist – **[AI AGENT TODO: Add version number / name]**
+# Version Tasklist – **[AI AGENT TODO: Add version number / name]**
 This document outlines all the tasks to work on to delivery this particular version, grouped by phases.
 
 **[AI AGENT TODO: Create a table for each phase and add all the tasks in that phase.]**
@@ -16,5 +16,5 @@ This document outlines all the tasks to work on to delivery this particular vers
 
 | ID  | Task             | Description                             | Dependecies | Status | Assigned To |
 |-----|------------------|-----------------------------------------|-------------|----------|--------|
-| [id] | [Task Name]   | [Task Description]              | [List of Task IDs or None] | [Use both emoji and work]  | [USER, AGENT] |
+| [id] | [Task Name]   | [Task Description]              | [List of Task IDs or None] | [Use both emoji and text]  | [USER, AGENT] |
 

@@ -1,11 +1,11 @@
-# Release Retrospective – [Release Version]
-This document reflects on what worked, what didn’t, and how future releases can be improved.
+# Version Retrospective – [Version]
+This document reflects on what worked, what didn’t, and how future versions can be improved.
 
-## Release Summary
+## Version Summary
 **[AI AGENT TODO: Add details]**
 
 ## What Went Well
-_List things that were successful or effective during this release._
+_List things that were successful or effective during this version._
 
 **[AI AGENT TODO: Add details]**
 
@@ -20,6 +20,6 @@ _Both human and AI can add insights here. Focus on what to repeat or avoid in th
 **[AI AGENT TODO: Add details]**
 
 ## Action Items
-_Concrete steps or process changes to carry forward into the next release._
+_Concrete steps or process changes to carry forward into the next version._
 
 **[AI AGENT TODO: Add details]**

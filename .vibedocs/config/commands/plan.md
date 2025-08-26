@@ -14,9 +14,10 @@ description: Creates a vibedocs project and starts the PLAN phase.
 # CREATE FOLDER STRUCTURE
 # ***********************
 - create the following folder structure in {{vdRoot}} only if it does not exist already.
-/plan
-/work
 /assets
+/docs
+/plan
+/build
 
 # *************************
 # CREATE DISCOVERY DOCUMENT
@@ -47,5 +48,5 @@ description: Creates a vibedocs project and starts the PLAN phase.
 # ***************
 # PLAN PHASE ENDS
 # ***************
-- Tell the USER the phase has ended and if they want to start working, they can just type :vd work to create the feature backlog.
+- Tell the USER the phase has ended and if they want to start building, they can just type :vd build to create the feature backlog.
 - Stop here.

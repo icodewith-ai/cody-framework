@@ -1,6 +1,6 @@
 ---
 command: ":vd version add"
-description: Creates a new release (version) not in the feature-backlog.md file.
+description: Creates a new version not in the feature-backlog.md file.
 ---
 
 - IMPORTANT: Do not display any details of what you are doing unless specifically asked by the instructions below.
@@ -27,7 +27,7 @@ description: Creates a new release (version) not in the feature-backlog.md file.
 # ************************
 # GENERATE DESIGN DOCUMENT
 # ************************
-- Copy the design.md template from {{vbTemplates}}/work/version/design.md to the version folder you just created.
+- Copy the design.md template from {{vbTemplates}}/build/version/design.md to the version folder you just created.
 - Generate and update the design.md document with details from your conversation in the previous step.
 - Tell the USER to check the design.md document in the current version.
 - Tell the USER to announce when they are done.
@@ -36,7 +36,7 @@ description: Creates a new release (version) not in the feature-backlog.md file.
 # *****************
 # GENERATE TASKLIST
 # *****************
-- Copy the tasklist.md template from {{vdTemplates}}/work/version/tasklist.md to the version folder you just created.
+- Copy the tasklist.md template from {{vdTemplates}}/build/version/tasklist.md to the version folder you just created.
 - Create and generate the tasklist.md document using any of the previous documents created as reference.
 - Tell the USER to review the tasklist.md document in the current version and when they are done, to tell you.
 - Stop and wait for the USER.
@@ -47,9 +47,9 @@ description: Creates a new release (version) not in the feature-backlog.md file.
 - Add the new version to the feature-backlog.md file in {{vdWorkPhase}}
 
 
-# **********************
-# CHOOSE WHAT TO WORK ON 
-# **********************
+# ********************
+# CHOOSE WHAT TO BUILD 
+# ********************
 - Ask the USER which task or phase in the tasklist.md file they would like to start working on.
 - Stop here and wait for USER to tell you.
 
@@ -67,6 +67,6 @@ description: Creates a new release (version) not in the feature-backlog.md file.
 - Once all phases have been completed:
     - Tell the USER this version has been completed.
     - Update {{vdWorkPhase}}/feature-backlog.md with completed version.
-    - Copy from {{vdTemplates}}/work/version/retrospective.md to the current version folder.
+    - Copy from {{vdTemplates}}/build/version/retrospective.md to the current version folder.
     - Update the retrospective.md file.
     - Tell the USER what you have done and ask them what to do next.

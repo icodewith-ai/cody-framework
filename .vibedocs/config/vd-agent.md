@@ -25,28 +25,28 @@ This phase guides USERS through the creation of documents that help define and f
 | `plan.md` | This document defines how the product will be built and when. |
 
 
-### 2. Work
-This phase guides USERS through the iterative development cycle by creating documents that break their application into manageable chunks called releases.  We first start creating the feature backlog.
+### 2. Build
+This phase guides USERS through the iterative development cycle by creating documents that break their application into manageable chunks called versions.  We first start creating the feature backlog.
 
 | Document | Description |
 |----------|-------------|
-| `feature-backlog.md` | This document lists features and enhancements derived from the plan. It lives on the top level of the Work phase, accessible by all releases. It is a living document that will evolve throughout the project. It is grouped by release (each release is a table), with the Backlog (table) tracking all features not added to a release yet.  It is used to create releases to work on. |
+| `feature-backlog.md` | This document lists features and enhancements derived from the plan. It lives on the top level of the Build phase, accessible by all versions. It is a living document that will evolve throughout the project. It is grouped by version (each version is a table), with the Backlog (table) tracking all features not added to a version yet.  It is used to build versions. |
 
-> Then we create releases based on the feature backlog. The following documents are used for every release a USER works on.
+> Then we create versions based on the feature backlog. The following documents are used for every version a USER works on.
 
 | Document | Description |
 |----------|-------------|
-| `design.md` | THis document outlines the technical implementation and design guide for the upcoming release. |
+| `design.md` | THis document outlines the technical implementation and design guide for the upcoming version. |
 | `tasklist.md` | This document outlines all the tasks to work on, grouped by phases, to deliver this particular version. |
-| `retrospective.md` | This document reflects on what worked, what didn't, and how future releases can be improved. |
+| `retrospective.md` | This document reflects on what worked, what didn't, and how future versions can be improved. |
 
-## Release Version Naming Convention
+## Version Naming Convention
 - Version numbers follow the format v[major.minor.patch] and increment by one automatically, unless the USER specifically requests a particular version number.
-- Version folders inside the @.vibedocs/work/ folder are named "v[major.minor.patch]-[name]" (e.g. v1.0.3-refactor-code)
-- The starting release version will be 0.1.0, unless the USER specifically requests a particular version number.
+- Version folders inside the @.vibedocs/build/ folder are named "v[major.minor.patch]-[name]" (e.g. v1.0.3-refactor-code)
+- The starting version will be 0.1.0, unless the USER specifically requests a particular version number.
 - Names can't be longer than 30 characters in total.  Names can only include dashes to separate words and must be all in lower case.  Only allow letters (UPPER and lower case ok), numbers (0-9) and '-' (dashes) can separate words.
 - If the USER didn't provide a version, automatically assign one.
-- If the USER didn't provide a name for the release, skip the -[name]
+- If the USER didn't provide a name for the version, skip the -[name]
 
 ## Template Placeholder Values
 These placeholders are a pointer to actual values. They are created here and used throughout various commands.  When you encounter a placeholder value, you will replace it with it's value and consider that as the literal (e.g. {{vdConfig}}/vd-agent.md would translate to .vibedocs/config/vd-agent.md)
@@ -58,7 +58,8 @@ These placeholders are a pointer to actual values. They are created here and use
 | {{vdTemplates}} | .vibedocs/config/templates | Vibedocs templates folder |
 | {{vdCommands}} | .vibedocs/config/commands | Vibedocs commands to be executed. |
 | {{vdPlanPhase}} | .vibedocs/plan | Vibedocs root folder for the planning phase. |
-| {{vdWorkPhase}} | .vibedocs/work | Vibedocs root folder for the work phase. |
+| {{vdWorkPhase}} | .vibedocs/build | Vibedocs root folder for the build phase. |
+| {{vdDocs}} | .vibedocs/docs | Vibedocs documentation folder for reference docs such as Tech Stacks, CMS Management, Design System, etc. |
 | {{vdAssets}} | .vibedocs/assets | Vibedocs assets folder for the USER to store assets the AGENT can review (e.g. diagrams, images, etc). |
 
 ##  :ASSETS in USER Prompts and What the AGENT Should Do
@@ -77,16 +78,16 @@ The USER at times may want to tell the AGENT about a particular file that they n
 > Creates a vibedocs project and starts the PLAN phase.
 **[AI AGENT TODO: Read and execute {{vdCommands}}/plan.md]** 
 
-> ### `:vd work`
-> Starts the WORK phase and creates the feature backlog. 
-**[AI AGENT TODO: Read and execute {{vdCommands}}/work.md]** 
+> ### `:vd build`
+> Starts the BUILD phase and creates the feature backlog. 
+**[AI AGENT TODO: Read and execute {{vdCommands}}/build.md]** 
 
-> ### `:vd version work`
-> Creates a release (version) using the feature-backlog.md file.  The USER will pick which release to work on.
-**[AI AGENT TODO: Read and execute {{vdCommands}}/version-work.md]** 
+> ### `:vd version build`
+> Creates a version using the feature-backlog.md file.  The USER will pick which version to build.
+**[AI AGENT TODO: Read and execute {{vdCommands}}/version-build.md]** 
 
 > ### `:vd version add`
-> Creates a new release (version) not in the feature-backlog.md file.
+> Creates a new version not in the feature-backlog.md file.
 **[AI AGENT TODO: Read and execute {{vdCommands}}/version-add.md]** 
 
 > ### `:vd refresh`
