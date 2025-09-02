@@ -1,18 +1,31 @@
-# Vibedocs License
-Copyright (c) 2025 Red Pill Blue Pill Studios, LLC and Marcelo Lewin
+# Cody Framework License
+![Cody Framework](./cody-logo.png)
 
-Permission is granted to use this software solely for the purpose of structured documentation workflows and AI-assisted development planning using the Vibedocs framework.
+© Copyright 2025 - Red Pill Blue Pill Studios, LLC - All Rights Reseved.
 
-You may integrate this framework into internal workflows, including CI/CD pipelines, provided that such usage remains within the scope of Vibedocs documentation and planning workflows and does not involve redistribution or repackaging.
+**Permission:** Permission is hereby granted to **use the Cody Framework software solely for its intended purpose – that is, for structured documentation workflows and AI-assisted development planning within the scope of the Cody Framework. You may download or clone the official repository for personal or internal use in accordance with this intended purpose.
 
-Any other use—including but not limited to automation of unrelated workflows, integration with non-Vibedocs platforms, or adaptation for other documentation frameworks—is strictly prohibited without prior written permission.
+**Internal Use:** You are allowed to integrate the Cody Framework into your internal workflows (for example, your organization’s documentation pipeline or CI/CD process), provided that such use remains within the Cody Framework’s intended functionality and does not involve any form of redistribution or repackaging of the software outside your internal environment.
 
-Modification of the codebase is permitted for internal use only. Any modified versions must be submitted as a pull request to the official repository at https://github.com/icodewith-ai/vibedocs before being used, shared, or deployed. Only code that has been approved and merged into the official repository may be used beyond internal development. Redistribution or hosting of modified versions is prohibited under all other circumstances.
+**Educational Use:** Non-commercial educational use of the Cody Framework is permitted. This means you may use and demonstrate the software for teaching or learning purposes (e.g. in classrooms, workshops, or tutorials) as long as no fees are charged specifically for the use of or training in the Cody Framework. The software must still be used in an unmodified form and in line with its intended purpose. (In other words, you can teach how to use Cody or use Cody as a tool in teaching, but you cannot sell a course about Cody without permission.)
 
-Redistribution, republishing, mirroring, or packaging of this software or its modified versions is strictly prohibited. All usage must reference and depend on the official GitHub repository or npm package.
+**Prohibited Uses:** Any use of the Cody Framework outside the scope of documentation workflows and AI-assisted planning is strictly prohibited. Without limiting the foregoing, the following are explicitly not allowed without prior written consent from Red Pill Blue Pill Studios, LLC:
 
-Commercial use—including integration into SaaS platforms, hosted services, resale, or inclusion in proprietary tools—is prohibited without explicit written consent.
+- **No Unrelated Automation or Integration:** You may not use the Cody Framework to automate workflows that are unrelated to its documentation/planning purpose, nor integrate it with non-Cody platforms or use its code in other frameworks or systems not approved by the Cody Framework’s scope.
+- **No Adaptation or Derivative Works:** You may not adapt, translate, or otherwise use the codebase to create a different or competing documentation framework. Using any part of the Cody Framework in other software or projects is disallowed.
+- **No Modification:** You may not modify the Cody Framework’s source code or create derivative works based on it. The source is provided for reference, transparency, and approved internal use only, not for alteration. Exception: If you wish to improve the code or fix a bug, you may modify it solely for the purpose of contributing those changes back to the official Cody Framework repository (e.g., submitting a pull request or patch for possible inclusion by the maintainers). However, you have no right to use, distribute, or deploy your modified version unless and until such changes are officially accepted and released by Red Pill Blue Pill Studios, LLC as part of the official software. In short, any modified version of Cody is for evaluation or contribution only – not for your own independent use.
+- **No Forking or Public Redistribution:** You may not fork this repository or otherwise make the code publicly available in your own project or repository. Cloning the repository for local use is allowed (as it remains private to you), but publishing a fork or copy of the code (on GitHub or any other platform) is considered a form of redistribution and is strictly prohibited. The only permissible reason to create a fork on a platform like GitHub would be to facilitate an official contribution (as noted above), and in that case the fork should be temporary and not promoted as an alternate source of the software. You may not host, mirror, or redistribute the Cody Framework’s code or any modified version on any public site, npm registry, server, or service.
 
-This software is provided "AS IS", without warranty of any kind.
+- **No Commercial Use:** You may not use the Cody Framework for any commercial purpose without explicit prior written consent from Red Pill Blue Pill Studios, LLC. Prohibited commercial uses include, but are not limited to:
+    - Integrating the Cody Framework into any product or service that you sell, license, or offer for a fee (for example, including it in a paid SaaS offering or a proprietary application).
+	- Offering services or software that incorporate Cody as a component of a monetized offering.
+	- Reselling or sublicensing the Cody Framework, in whole or in part.
+	- Using the Cody Framework to provide paid consulting, support, or training specifically focused on the Cody Framework itself. (General consulting where Cody is incidentally used as a tool might be okay, but you cannot charge clients for Cody or its specific functionality without permission.)
 
-For licensing inquiries, contact: marcelo@icodewith.ai
+- _If you are interested in a commercial use or partnership involving the Cody Framework, you must contact the licensor to discuss terms and obtain written approval._
+
+**Official Distribution Only:** All usage of the Cody Framework must reference and depend on the official distribution of the software. This means that if you incorporate Cody into your environment or project, you should obtain it from the official GitHub repository or npm package provided by Red Pill Blue Pill Studios, LLC. You must not create independent distributions of the Cody Framework. (For example, do not re-publish Cody’s code as your own package or check the Cody code into your own repository except as allowed for internal use.) This ensures that everyone is using the authentic, unmodified Cody Framework and that any updates or fixes come directly from the official source.
+
+**No Warranty:** This software is provided “AS IS”, without warranty of any kind, express or implied. By using the Cody Framework, you accept that the authors and copyright holders offer no guarantees and will not be held liable for any issues, damages, or losses arising from its use. You assume all risks associated with using the software.
+
+**Contact and Exceptions:** For licensing inquiries or to seek permission for any use that is not clearly permitted by this license, please contact _Red Pill Blue Pill Studios, LLC_ at _marcelo@redpillbluepillstudios.com_. Only an explicit, written consent from the copyright holder can grant exceptions or modifications to the above terms. (In other words, if you’re unsure whether your intended use is allowed, or if you need a special license to do something prohibited above (such as a commercial deployment or creating a derivative), reach out and obtain written approval first.)
