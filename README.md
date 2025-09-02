@@ -13,31 +13,31 @@ Say hello to Cody, a spec-driven development framework built specifically to hel
 ## What's the Cody Framework? 
 Cody is a documentation framework designed for Claude Code, Codex, Gemini CLI, OpenCode, Cursor, Copilot, and other AI coding environments. It guides you through:
 
-	- Idea Discovery and Refinement: Capture sparks of inspiration and shape them into clear, actionable plans.
-	- Planning: Organize your thoughts into structured, yet flexible, documents that keep creativity alive.
-	- Chuncked Implementation: Break projects into manageable chuncks, called versions, you can build, test, and iterate on.
+- Idea Discovery and Refinement: Capture sparks of inspiration and shape them into clear, actionable plans.
+- Planning: Organize your thoughts into structured, yet flexible, documents that keep creativity alive.
+- Chuncked Implementation: Break projects into manageable chuncks, called versions, you can build, test, and iterate on.
 
 With Cody, you get:
 
-	- A consistent structure that keeps documentation, planning, and implementation in sync.
-	- Faster progress by eliminating repetitive guesswork and freeing your focus for creativity.
-	- Better collaboration as everyone (you, your team and AI) works from the same rhythm of tasks, milestones, and shared understanding.
+- A consistent structure that keeps documentation, planning, and implementation in sync.
+- Faster progress by eliminating repetitive guesswork and freeing your focus for creativity.
+- Better collaboration as everyone (you, your team and AI) works from the same rhythm of tasks, milestones, and shared understanding.
 
 ## Built for Vibe Coders and the New Generation of Builders
 
-	- Scaffolding: Cody provides templates and guidance.
-	- Agent-friendly Flexibility: You stay in control; Cody simply sets the path.
-	- AI-first Integration: Cody works directly where your coding assistant lives.
-	- Consistency at Scale: Solo or team, Cody keeps docs, plans, and versions aligned.
+- Scaffolding: Cody provides templates and guidance.
+- Agent-friendly Flexibility: You stay in control; Cody simply sets the path.
+- AI-first Integration: Cody works directly where your coding assistant lives.
+- Consistency at Scale: Solo or team, Cody keeps docs, plans, and versions aligned.
 
 ## Core Philosophy
 
 Cody bridges the gap between unstructured brainstorming and systematic development:
 
-	- Structure Without Rigidity: Guidance that supports, not restricts.
-	- Iterative Refinement: Built-in feedback loops between human and AI.
-	- Version-based Development: Work is organized into clear, manageable chunks, called versions.
-	- Living Documentation: Project docs that evolve as your work evolves. Constantly updated.
+- Structure Without Rigidity: Guidance that supports, not restricts.
+- Iterative Refinement: Built-in feedback loops between human and AI.
+- Version-based Development: Work is organized into clear, manageable chunks, called versions.
+- Living Documentation: Project docs that evolve as your work evolves. Constantly updated.
 
 # Cody's Two-Phase Development Cycle
 
