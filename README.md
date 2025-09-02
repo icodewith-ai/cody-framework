@@ -126,18 +126,19 @@ You can tell Cody what to do using the `:cody [command]` format.
 │               ├── design.md
 │               ├── tasklist.md
 │               └── retrospective.md
-├── assets/                     # User assets (added by the user for the AI agent to review)
-├── docs/                       # Adhoc documentation created during development
-├── plan/                       # Generated planning documents (created when needed)
-│   ├── discovery.md
-│   ├── prd.md
-│   └── plan.md
-└── build/                      # Build phase documents (created when needed)
-    ├── feature-backlog.md     	# Master feature list
-    └── v[x.y.z]-[name]/       	# Version-specific folders
-            ├── design.md
-            ├── tasklist.md
-            └── retrospective.md
+└── project/
+    ├── assets/                     # User assets (added by the user for the AI agent to review)
+    ├── docs/                       # Adhoc documentation created during development
+    ├── plan/                       # Generated planning documents (created when needed)
+    │   ├── discovery.md
+    │   ├── prd.md
+    │   └── plan.md
+    └── build/                      # Build phase documents (created when needed)
+        ├── feature-backlog.md     	# Master feature list
+        └── v[x.y.z]-[name]/       	# Version-specific folders
+                ├── design.md
+                ├── tasklist.md
+                └── retrospective.md
 ```
 
 ## Best Practices
