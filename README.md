@@ -90,8 +90,8 @@ You can tell Cody what to do using the `:cody [command]` format.
 | `:cody help` | Provides the USER with help about Cody. |
 | `:cody plan` | Creates a Cody project and starts the PLAN phase. |
 | `:cody build` | Starts the BUILD phase and creates the feature backlog. |
-| `:cody build version` | Creates a version using the feature-backlog.md file. The USER will pick which version to build. |
-| `:cody add version` | Adds a new version to the `feature-backlog.md` file. |
+| `:cody version build` | Creates a version using the feature-backlog.md file. The USER will pick which version to build. |
+| `:cody version add` | Adds a new version to the `feature-backlog.md` file. |
 | `:cody refresh` | Refreshes the AI AGENT's memory about the current. |
 | `:cody refresh update` | Refreshes the AI AGENT's memory about the current and the AI AGENT updates the `plan.md` and `prd.md` files with the latest project changes. |
 | `:cody relearn` | It forces the AI AGENT to re-read the Cody `agent.md` file to check for any updates |

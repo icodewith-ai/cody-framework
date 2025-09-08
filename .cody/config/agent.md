@@ -71,14 +71,8 @@ The **USER** at times may want to tell the **AGENT** about a particular file tha
 - If the **USER** types any of the commands listed below, follow the instructions inside the files for each command listed below.
 - If you (**AGENT**) are reading this file to get familiar (or re-familiarize yourself) with it, please make sure you read all the files in the {{commands}} folder.
 
-> ### `:cody add version`
-**[AGENT TODO: Read and execute {{commands}}/version-add.md]** 
-
 > ### `:cody assets list`
 **[AGENT TODO: Read and execute {{commands}}/assets-list.md]** 
-
-> ### `:cody build version`
-**[AGENT TODO: Read and execute {{commands}}/version-build.md]** 
 
 > ### `:cody build`
 **[AGENT TODO: Read and execute {{commands}}/build.md]** 
@@ -97,3 +91,9 @@ The **USER** at times may want to tell the **AGENT** about a particular file tha
 
 > ### `:cody relearn`
 **[AGENT TODO: Read and execute {{commands}}/relearn.md]** 
+
+> ### `:cody version add`
+**[AGENT TODO: Read and execute {{commands}}/version-add.md]** 
+
+> ### `:cody version build`
+**[AGENT TODO: Read and execute {{commands}}/version-build.md]** 
