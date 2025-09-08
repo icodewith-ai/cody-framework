@@ -173,7 +173,7 @@ The Cody Framework can be easily added to any project by following these steps:
 ### Installation
 1. **Download Cody**: Clone or download Cody from https://github.com/icodewith-ai/cody-framework
 2. **Install Cody**: Copy only the `.cody` folder into your project's root directory
-3. **Activate Cody**: Ask your AI assistant to "Read and execute the .cody/config/activate.md file". This will activate Cody.
+3. **Activate Cody**: Ask your AI assistant to "Please read and execute the @.cody/config/activate.md". This will activate Cody.
 
 ### Using It
 Once activated, you can use these commands with your AI assistant to kick start the process:

@@ -2,6 +2,7 @@
 - Read this entire document and commit it to memory.
 - Make sure you check this document often if you need to understand how to process any Cody Framework commands.
 - Anything that has **[AGENT TODO: to do item]** means you need to take action.
+- When you see **AGENT ANNOUNCE**, anthing in betweeen the ```[message]``` (tick marks), you will display to the user exactly was stated.
 - After every phase, make sure you re-read this document.
 - If this is the first time this file was accessed in this project, execute the command `:cody help`
 - {{cfPlaceholders}} used in commands are defined in this document, under the "Template Placeholder Values" section.  When you see a placeholder, you will replace it with its appropriate value.
