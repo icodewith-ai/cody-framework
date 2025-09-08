@@ -8,7 +8,7 @@ agent-instructions: IMPORTANT - Do not display any details of what you are doing
 
 ### CREATE FOLDER STRUCTURE
 
-- create the following folder structure in {{cfProject}} only if it does not exist already.
+- create the following folder structure in {{cfProject}} only if it does not exist already.  All folders must exists.  Create any missing folders.
 
     ```
     /build
@@ -19,6 +19,12 @@ agent-instructions: IMPORTANT - Do not display any details of what you are doing
         /rules
     /plan
     ```
+
+### CHECK IF PLAN PHASE HAS ALREADY STARTED
+- Check if {{cfPlanPhase}} folder has any documents.  
+    - If it does, list the documents already started.
+    - End here.
+- If it does not, continue to the next section.
 
 ### ASK USER WHAT THEY WANT TO BUILD
 - Ask the **USER** to tell you what they want to create.  Tell them to be as detailed as possible.
