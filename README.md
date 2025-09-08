@@ -1,17 +1,17 @@
-# Cody Framework
+# Cody Spec Driven Development Framework
 
-![Cody Framework](./cody-logo.png)
+![Cody Spec Driven Development (SDD) Framework](./cody-logo.png)
 
 © Copyright 2025 - Red Pill Blue Pill Studios, LLC - All Rights Reseved.
 
 ![Version](https://img.shields.io/badge/version-1.0.5-blue)
 [![License](https://img.shields.io/badge/license-Custom-green)](LICENSE.md)
 
-# About Cody Framework
+# About Cody SDD Framework
 Say hello to Cody, a spec-driven development framework built specifically to help Vibe Coders bring their ideas to life. Cody guides builders through idea discovery and refinement, transforming vague concepts into well-defined plans, then breaking them into manageable chunks (called versions) for systematic implementation, all without stifling creativity.
 
-## What's the Cody Framework? 
-Cody (previously known as Vibedocs) is a documentation framework designed for Claude Code, Codex, Gemini CLI, OpenCode, Cursor, Copilot, and other AI coding environments. It guides you through:
+## What's the Cody SDD Framework? 
+Cody (previously known as Vibedocs) is a spec driven development framework designed for Claude Code, Codex, Gemini CLI, OpenCode, Cursor, Copilot, and other AI coding environments. It guides you through:
 
 - Idea Discovery and Refinement: Capture sparks of inspiration and shape them into clear, actionable plans.
 - Planning: Organize your thoughts into structured, yet flexible, documents that keep creativity alive.
