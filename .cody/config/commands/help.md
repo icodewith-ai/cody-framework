@@ -6,9 +6,11 @@ agent-instructions: IMPORTANT - Do not display any details of what you are doing
 
 **AGENT ANNOUNCE**
 ```
+================================================
 Cody Spec Driven Development (SDD) Framework
 Created and maintained by iCodeWith.ai
 (©) 2025 by Red Pill Blue Pill Studios, LLC
+================================================
 ```
 
 - Provide the **USER** with a short overview of the Cody Framework.
