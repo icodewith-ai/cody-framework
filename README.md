@@ -11,7 +11,7 @@
 Say hello to Cody, a spec-driven development framework built specifically to help Vibe Coders bring their ideas to life. Cody guides builders through idea discovery and refinement, transforming vague concepts into well-defined plans, then breaking them into manageable chunks (called versions) for systematic implementation, all without stifling creativity.
 
 ## What's the Cody Framework? 
-Cody is a documentation framework designed for Claude Code, Codex, Gemini CLI, OpenCode, Cursor, Copilot, and other AI coding environments. It guides you through:
+Cody (previously known as Vibedocs) is a documentation framework designed for Claude Code, Codex, Gemini CLI, OpenCode, Cursor, Copilot, and other AI coding environments. It guides you through:
 
 - Idea Discovery and Refinement: Capture sparks of inspiration and shape them into clear, actionable plans.
 - Planning: Organize your thoughts into structured, yet flexible, documents that keep creativity alive.

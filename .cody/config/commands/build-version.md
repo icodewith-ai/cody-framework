@@ -40,7 +40,11 @@ agent-instructions: IMPORTANT - Do not display any details of what you are doing
 ### VERSION COMPLETED
 - Once all the phases for the version you (**AGENT**) and the **USER** are working on are completed:
     - Tell the **USER** this version has been completed.
+    - Tell the **USER** that you will update the Feature Backlog now.
     - Update the version in {{cfWorkPhase}}/feature-backlog.md to `completed` status.
+    - Tell the **USER** that you will create a Retrospective now.
     - Copy from {{cfTemplates}}/build/version/retrospective.md to the current version folder.
     - Update the retrospective.md file.
-    - Tell the **USER** what you have done and ask the **USER** what they'd like to do next.
+    - Tell the **USER** that you will now check and update anything in the Plan and PRD documents.
+    - Run the `:cody refresh update` command.
+    - Tell the **USER** that the version is now officially closed and ask the **USER** what they'd like to do next.

@@ -2,15 +2,13 @@
 This document captures the raw, unfiltered idea or initial AI prompt that sparked the project.
 
 ## Starting Prompt
-**[USER TODO: Describe what you are trying to create here]**
+**[AI AGENT TODO: Add the **USER** original prompt here.]**
 
-## Q&A
-**[AI AGENT TODO: Ask the user as many questions as you need to fully understand the project.  Try not to overload the USER with too many though.  Remember you can have follow up questions after the USER answers the initial ones.]**
+## Questions
+**[AI AGENT TODO: Add all the questions and the answer from the **USER** below in the format listed below.]**
 
-**[AI AGENT TODO: When iterating on the q&a, separate new questions by sections (e.g. *** Clarification Questions *** ).]**
-
-**AGENT Q1:** [Add question]  
-**USER A1:** [User answer]
+**AGENT Q1:** [**AGENT** Question]  
+**USER A1:** [**USER** Answer]
 
 ## Discovery Summary
-**[AI AGENT TODO: Once you are done with the Q&A section and are ready to move on to the PRD, summarize your understanding of the project here.]**
+**[AI AGENT TODO: Summarize your understanding of the project here based on the original prompt and the Q&A.]**
