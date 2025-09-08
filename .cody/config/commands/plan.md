@@ -11,9 +11,12 @@ agent-instructions: IMPORTANT - Do not display any details of what you are doing
 - create the following folder structure in {{cfProject}} only if it does not exist already.
 
     ```
-    /assets
     /build
-    /docs
+    /library
+        /assets
+        /docs
+        /prompts
+        /rules
     /plan
     ```
 

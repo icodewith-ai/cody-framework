@@ -61,8 +61,10 @@ These placeholders are a pointer to actual values. They are created here and use
 | {{cfProject}} | .cody/project/ | Project folder for generate files. |
 | {{cfPlanPhase}} | .cody/project/plan | Cody root folder for the planning phase. |
 | {{cfWorkPhase}} | .cody/project/build | Cody root folder for the build phase. |
-| {{cfDocs}} | .cody/project/docs | Cody documentation folder for reference docs such as Tech Stacks, CMS Management, Design System, etc. |
-| {{cfAssets}} | .cody/project/assets | Cody assets folder for the **USER** to store assets the **AGENT** can review (e.g. diagrams, images, etc). |
+| {{cfDocs}} | .cody/library/docs | Cody documentation folder for reference docs such as Tech Stacks, CMS Management, Design System, etc. |
+| {{cfAssets}} | .cody/library/assets | Cody assets folder for the **USER** to store assets the **AGENT** can review (e.g. diagrams, images, etc). |
+| {{cfRules}} | .cody/library/rules | Cody rules that a **USER** can create for the **AGENT** to follow. |
+| {{cfPrompts}} | .cody/library/prompts | Cody prompt templates that a **USER** can reuse. |
 
 ##  `{{cfAssets}}` in USER Prompts and What the **AGENT** Should Do
 The **USER** at times may want to tell the **AGENT** about a particular file that they need to review as part of their prompt. For example, the **USER** may state something like "Check out the database.png file in the `{{cfAssets}}` folder". If the **USER** uses in any of their prompts `{{cfAssets}}`, the **AGENT* can use the Template Placeholder Values table to look up the actual location of the {{cfAssets}} for that file. If it does not find it, it should tell the user that it was not found and give a list of all the files found in the `{{cfAssets}}` folder.

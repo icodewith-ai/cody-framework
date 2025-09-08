@@ -90,7 +90,7 @@ You can tell Cody what to do using the `:cody [command]` format.
 | `:cody help` | Provides the USER with help about Cody. |
 | `:cody plan` | Creates a Cody project and starts the PLAN phase. |
 | `:cody build` | Starts the BUILD phase and creates the feature backlog. |
-| `:cody version build` | Creates a version using the feature-backlog.md file. The USER will pick which version to build. |
+| `:cody version build` | Begins the building phase of a particular version in `feature-backlog.md` file. |
 | `:cody version add` | Adds a new version to the `feature-backlog.md` file. |
 | `:cody refresh` | Refreshes the AI AGENT's memory about the current. |
 | `:cody refresh update` | Refreshes the AI AGENT's memory about the current and the AI AGENT updates the `plan.md` and `prd.md` files with the latest project changes. |
@@ -127,18 +127,21 @@ You can tell Cody what to do using the `:cody [command]` format.
 │               ├── tasklist.md
 │               └── retrospective.md
 └── project/
-    ├── assets/                     # User assets (added by the user for the AI agent to review)
-    ├── docs/                       # Adhoc documentation created during development
-    ├── plan/                       # Generated planning documents (created when needed)
-    │   ├── discovery.md
-    │   ├── prd.md
-    │   └── plan.md
-    └── build/                      # Build phase documents (created when needed)
-        ├── feature-backlog.md     	# Master feature list
-        └── v[x.y.z]-[name]/       	# Version-specific folders
-                ├── design.md
-                ├── tasklist.md
-                └── retrospective.md
+  ├── library/                     
+  │   ├── assets/                  # Any assets for the User or AI.
+  │   ├── docs/                    # On-Demand or Ad-hoc documentation.
+  │   ├── prompts/                 # Reusable prompt templates with arguments.
+  │   └── rules/                   # Rules the AI agent must follow.
+  ├── plan/                        # Documents created during the plan phase.
+  │   ├── discovery.md             
+  │   ├── prd.md
+  │   └── plan.md
+  └── build/                       # Documents created during the build phase.
+    ├── feature-backlog.md
+    └── v[x.y.z]-[name]/
+      ├── design.md
+      ├── tasklist.md
+      └── retrospective.md
 ```
 
 ## Best Practices
