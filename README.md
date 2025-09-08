@@ -15,7 +15,7 @@ Cody (previously known as Vibedocs) is a spec driven development framework desig
 
 - Idea Discovery and Refinement: Capture sparks of inspiration and shape them into clear, actionable plans.
 - Planning: Organize your thoughts into structured, yet flexible, documents that keep creativity alive.
-- Chuncked Implementation: Break projects into manageable chuncks, called versions, you can build, test, and iterate on.
+- Chunked Implementation: Break projects into manageable chunks, called versions, you can build, test, and iterate on.
 
 With Cody, you get:
 
