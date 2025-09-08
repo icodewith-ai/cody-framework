@@ -4,7 +4,7 @@
 
 © Copyright 2025 - Red Pill Blue Pill Studios, LLC - All Rights Reseved.
 
-![Version](https://img.shields.io/badge/version-1.0.4-blue)
+![Version](https://img.shields.io/badge/version-1.0.5-blue)
 [![License](https://img.shields.io/badge/license-Custom-green)](LICENSE.md)
 
 # About Cody Framework
