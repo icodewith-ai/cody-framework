@@ -8,7 +8,7 @@ agent-instructions: IMPORTANT - Do not display any details of what you are doing
 
 ### CREATE FOLDER STRUCTURE
 
-- create the following folder structure in {{cfProject}} only if it does not exist already.  All folders must exists.  Create any missing folders.
+- create the entire folder structure in {{cfProject}}.  All folders must exists.  Create any missing folders and/or sub-folders.  Make sure all exist before continuing to the next step.
 
     ```
     /build
