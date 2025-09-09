@@ -1,7 +1,6 @@
 ---
 command: ":cody version add"
 description: Adds a new version to the feature-backlog.md file.
-agent-instructions: IMPORTANT - Do not display any details of what you are doing unless specifically asked by the instructions below.
 ---
 
 # ADD NEW VERSION

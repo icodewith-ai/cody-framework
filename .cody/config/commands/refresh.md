@@ -1,7 +1,6 @@
 ---
 command: ":cody refresh"
 description: Refreshes the memory about the current project of the AI AGENT.
-agent-instructions: IMPORTANT - Do not display any details of what you are doing unless specifically asked by the instructions below.
 ---
 
 # REFRESH AGENT MEMORY

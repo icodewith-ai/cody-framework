@@ -1,7 +1,6 @@
 ---
 command: ":cody help"
 description: Provides the USER with help about Cody.
-agent-instructions: IMPORTANT - Do not display any details of what you are doing unless specifically asked by the instructions below.
 ---
 
 **AGENT ANNOUNCE**

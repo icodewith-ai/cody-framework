@@ -58,13 +58,14 @@ These placeholders are a pointer to actual values. They are created here and use
 | {{cfConfig}} | .cody/config/ | Cody configuration folder |
 | {{cfTemplates}} | .cody/config/templates | Cody templates folder |
 | {{cfCommands}} | .cody/config/commands | Cody commands to be executed. |
+| {{cfComponents}} | .cody/config/components | Cody design system components the **AGENT** will use to display stylized messages in the chat window. |
 | {{cfProject}} | .cody/project/ | Project folder for generate files. |
 | {{cfPlanPhase}} | .cody/project/plan | Cody root folder for the planning phase. |
 | {{cfWorkPhase}} | .cody/project/build | Cody root folder for the build phase. |
-| {{cfDocs}} | .cody/library/docs | Cody documentation folder for reference docs such as Tech Stacks, CMS Management, Design System, etc. |
-| {{cfAssets}} | .cody/library/assets | Cody assets folder for the **USER** to store assets the **AGENT** can review (e.g. diagrams, images, etc). |
-| {{cfRules}} | .cody/library/rules | Cody rules that a **USER** can create for the **AGENT** to follow. |
-| {{cfPrompts}} | .cody/library/prompts | Cody prompt templates that a **USER** can reuse. |
+| {{cfDocs}} | .cody/project/library/docs | Cody documentation folder for reference docs such as Tech Stacks, CMS Management, Design System, etc. |
+| {{cfAssets}} | .cody/project/library/assets | Cody assets folder for the **USER** to store assets the **AGENT** can review (e.g. diagrams, images, etc). |
+| {{cfRules}} | .cody/project/library/rules | Cody rules that a **USER** can create for the **AGENT** to follow. |
+| {{cfPrompts}} | .cody/project/library/prompts | Cody prompt templates that a **USER** can reuse. |
 
 ##  `{{cfAssets}}` in USER Prompts and What the **AGENT** Should Do
 The **USER** at times may want to tell the **AGENT** about a particular file that they need to review as part of their prompt. For example, the **USER** may state something like "Check out the database.png file in the `{{cfAssets}}` folder". If the **USER** uses in any of their prompts `{{cfAssets}}`, the **AGENT* can use the Template Placeholder Values table to look up the actual location of the {{cfAssets}} for that file. If it does not find it, it should tell the user that it was not found and give a list of all the files found in the `{{cfAssets}}` folder.
@@ -75,28 +76,42 @@ The **USER** at times may want to tell the **AGENT** about a particular file tha
 - If you (**AGENT**) are reading this file to get familiar (or re-familiarize yourself) with it, please make sure you read all the files in the {{commands}} folder.
 
 > ### `:cody assets list`
-**[AGENT TODO: Read and execute {{commands}}/assets-list.md]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/assets-list.md]** 
 
 > ### `:cody build`
-**[AGENT TODO: Read and execute {{commands}}/build.md]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/build.md]** 
 
 > ###  `:cody help` 
-**[AGENT TODO: Read and execute {{commands}}/help.md ]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/help.md ]** 
 
 > ### `:cody plan`
-**[AGENT TODO: Read and execute {{commands}}/plan.md]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/plan.md]** 
 
 > ### `:cody refresh update`
-**[AGENT TODO: Read and execute {{commands}}/refresh-update.md]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/refresh-update.md]** 
 
 > ### `:cody refresh`
-**[AGENT TODO: Read and execute {{commands}}/refresh.md]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/refresh.md]** 
 
 > ### `:cody relearn`
-**[AGENT TODO: Read and execute {{commands}}/relearn.md]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/relearn.md]** 
 
 > ### `:cody version add`
-**[AGENT TODO: Read and execute {{commands}}/version-add.md]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/version-add.md]** 
 
 > ### `:cody version build`
-**[AGENT TODO: Read and execute {{commands}}/version-build.md]** 
+**[AGENT TODO: Read and execute {{cfCommands}}/version-build.md]** 
+
+## Design System Components
+  - When you execute commands in the {{cfCommands}} folder, you will encounter XML tags.
+  - Only tags that begin with <cf:...> must be executed as a Cody Framework component.
+  - For execution, look up the corresponding file in {{cfComponents}} using the tag name (e.g., <cf:table> → table.md, <cf:card> → card.md).
+  - **CRITICAL**: When you encounter a <cf:...> tag, you MUST:
+    1. Read the corresponding component file from {{cfComponents}}
+    2. Extract the content between the opening and closing <cf:...> tags as the "body"
+    3. Extract any attributes (like headline="...") as arguments
+    4. Some arguments (like widht="50") may be used in the Display Instructions section of the component like this: {{width}}
+    5. Follow the Display Instructions in the component file exactly
+    6. Replace the entire <cf:...> block with the formatted output
+  - Standard HTML tags (e.g., <div>, <p>, <h1>) should not be executed.
+  - If you encounter a <cf:...> tag with no matching file, ask for clarification before proceeding.

@@ -1,7 +1,6 @@
 ---
 command: ":cody build"
 description: Starts the BUILD phase and creates the feature backlog.
-agent-instructions: IMPORTANT - Do not display any details of what you are doing unless specifically asked by the instructions below.
 ---
 
 # BUILD PHASE START

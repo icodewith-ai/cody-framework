@@ -1,7 +1,6 @@
 ---
 command: ":cody plan"
 description: Creates a Cody project and starts the PLAN phase.
-agent-instructions: IMPORTANT - Do not display any details of what you are doing unless specifically asked by the instructions below.
 ---
 
 # PLAN PHASE START

@@ -1,7 +1,6 @@
 ---
 command: ":cody version build"
 description: Creates a version using the feature-backlog.md file.  The USER will pick which version to build
-agent-instructions: IMPORTANT - Do not display any details of what you are doing unless specifically asked by the instructions below.
 ---
 
 # BUILD VERSION
