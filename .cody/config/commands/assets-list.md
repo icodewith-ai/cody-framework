@@ -17,7 +17,7 @@ Here are your current assets in the {{cfAssets}} folder:
 [**AGENT**: Convert filename to full uppercase][filename]
 [description]
 
-----------------
+[**AGENT**: Only show this line if there are multiple files]----------------
 
 [**AGENT**: Convert filename to full uppercase][filename]
 [description]
