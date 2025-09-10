@@ -21,9 +21,8 @@ arguments:
 - Wrap text so that no line of body content exceeds the box width (minus the borders).  
 - Preserve blank lines and spacing within the body (e.g., `----` should appear as-is, with spacing above and below if given).  
 - Always ensure the right border `|` aligns correctly, even if a line is shorter due to wrapping.  
-- Add an empty line above and below the body text for padding inside the box.  
-- The bottom border of the box must mirror the top border (`+------------------------------------+`).  
-- All lines should have a `|` border on the right and left, including the top and bottom (`| +-------------+ |`)
+- Add an empty line above and below the body text for padding inside the box.
+- All lines should have a `|` border on the right and left.
 - In the body or any other arguments passed, text inside of double brackets `{{...}}` is a prompt to be executed; replace it with its output. Text outside `{{...}}` should be displayed EXACTLY as written.
 
 # Example
