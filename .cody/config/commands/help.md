@@ -23,7 +23,7 @@ Created and maintained by iCodeWith.ai
 <cf:card headline="{{Green Checkmark Emoji}} Storing Images and Assets" width="100">
 {{
 - Tell the **USER** they can store any files they want the **AGENT** to review in the `{{cfAssets}}` folder.
-- Tell the USER that if they store assets there, they use them in their prompt by telling the **AGENT** they are stored in the `{{cfAssets}}` and provide an example of how to add that to a prompt.
+- Tell the USER that if they store assets there, they use them in their prompt by telling the **AGENT** they are stored in the `{{cfAssets}}` and provide an example of how to add that to a prompt (but for the example, use the literal assets with braces).
 }}
 </cf:card>
 
