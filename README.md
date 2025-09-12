@@ -115,8 +115,6 @@ You can tell Cody what to do using the `:cody [command]` format.
 │   │   ├── relearn.md
 │   │   ├── add-version.md
 │   │   └── build-version.md
-│   ├── components/             # Design system components
-│   │   └── card.md
 │   └── templates/
 │       ├── plan/               # Planning phase templates
 │       │   ├── discovery.md
@@ -145,32 +143,6 @@ You can tell Cody what to do using the `:cody [command]` format.
       ├── tasklist.md
       └── retrospective.md
 ```
-
-## Design System Components
-
-Cody includes a modular design system that allows the AI agent to display stylized, consistent output using reusable components. This system enhances the user experience by providing visually organized information in command responses.
-
-### How Components Work
-- **Component Files**: Design components are stored as markdown files in `.cody/config/components/`
-- **XML Tags**: Components are invoked using `<cf:componentname>` XML tags within command files
-- **Arguments**: Components support arguments like `headline`, `width`, etc., passed as XML attributes
-- **Rendering**: The AI agent reads the component file, processes the arguments, and renders formatted ASCII output
-
-### Available Components
-- **Card Component** (`card.md`): Creates stylized ASCII boxes with headlines and body content
-  - Arguments: `headline` (title text), `width` (box width in characters, default: 50)
-  - Usage: `<cf:card headline="Title" width="100">Content here</cf:card>`
-
-### Example Usage
-```xml
-<cf:card headline="Project Status" width="60">
-✅ Planning phase completed
-🔄 Build phase in progress
-📋 3 versions remaining in backlog
-</cf:card>
-```
-
-This renders as a formatted ASCII box with the headline centered and content left-aligned within the specified width.
 
 ## Best Practices
 

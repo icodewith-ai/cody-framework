@@ -5,20 +5,25 @@ description: Lists all the files stored in the assets folder, along with their k
 
 # LIST ALL ASSETS
 
-<cf:card headline="{{File Emoji}} List of Assets in the Assets Folder" width="100">
-{{
-[**AGENT**: DO NOT DISPLAY ANY OF THIS INFORMATION.]
-- List all the assets available in the `{{cfAssets}}` folder.
-- Provide any details you know about each asset next to it. 
+- **AGENT** show the **USER** the following first: 
+
+```
++---------------------------------+
+List of Assets in the Assets Folder
++---------------------------------+
+```
+
+- List all the assets available in the `{{cfAssets}}` folder.  But follow the format instructions below.
+- Provide any details you know about each asset below each file. 
 - Do not provide the information in a table format.
-}}
 
 Here are your current assets in the `{{cfAssets}}` folder:
 
-{{
-Display all files with descriptions in the following format.  Separate new files with "---------"
+- Display all files with descriptions in the following format.  
 
+```
 Convert filename to full uppercase [filename]
 [description]
-}}
-</cf:card>
+```
+
+- Separate new files with "---------"

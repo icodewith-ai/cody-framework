@@ -3,7 +3,13 @@ command: ":cody build"
 description: Starts the BUILD phase and creates the feature backlog.
 ---
 
-# BUILD PHASE START
+- **AGENT** show the **USER** the following first: 
+
+```
++---------------+
+Build Phase Start
++---------------+
+```
 
 ### CREATE FEATURE BACKLOG 
 Check that {{cfTemplates}}/build/feature-backlog.md does not exist.  
