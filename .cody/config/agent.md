@@ -101,17 +101,3 @@ The **USER** at times may want to tell the **AGENT** about a particular file tha
 
 > ### `:cody version build`
 **[AGENT TODO: Read and execute {{cfCommands}}/version-build.md]** 
-
-## Design System Components
-  - When you execute commands in the {{cfCommands}} folder, you will encounter XML tags.
-  - Only tags that begin with <cf:...> must be executed as a Cody Framework component.
-  - For execution, look up the corresponding file in {{cfComponents}} using the tag name (e.g., <cf:table> → table.md, <cf:card> → card.md).
-  - **CRITICAL**: When you encounter a <cf:...> tag, you MUST:
-    1. Read the corresponding component file from {{cfComponents}}
-    2. Extract the content between the opening and closing <cf:...> tags as the "body"
-    3. Extract any attributes (like headline="...") as arguments
-    4. Some arguments (like widht="50") may be used in the Display Instructions section of the component like this: {{width}}
-    5. Follow the Display Instructions in the component file exactly
-    6. Replace the entire <cf:...> block with the formatted output
-  - Standard HTML tags (e.g., <div>, <p>, <h1>) should not be executed.
-  - If you encounter a <cf:...> tag with no matching file, ask for clarification before proceeding.
