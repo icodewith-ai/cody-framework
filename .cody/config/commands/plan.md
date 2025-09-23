@@ -92,7 +92,6 @@ These are not required, but you may use or adapt them if helpful, especially whe
 /library
     /assets
     /docs
-    /rules
 /plan
 ```
 - Copy `{{cTemplates}}/plan/discovery.md` to `{{cfPlanPhase}}/discovery.md`.
