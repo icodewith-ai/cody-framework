@@ -130,8 +130,6 @@ You can tell Cody what to do using the `:cody [command]` format.
   ├── library/                     
   │   ├── assets/                  # Any assets for the User or AI.
   │   ├── docs/                    # On-Demand or Ad-hoc documentation.
-  │   ├── prompts/                 # Reusable prompt templates with arguments.
-  │   └── rules/                   # Rules the AI agent must follow.
   ├── plan/                        # Documents created during the plan phase.
   │   ├── discovery.md             
   │   ├── prd.md
