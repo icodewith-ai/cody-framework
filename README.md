@@ -4,7 +4,7 @@
 
 © Copyright 2025 - Red Pill Blue Pill Studios, LLC - All Rights Reseved.
 
-![Version](https://img.shields.io/badge/version-1.0.9-blue)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 [![License](https://img.shields.io/badge/license-Custom-green)](LICENSE.md)
 
 # About Cody SDD Framework
@@ -95,6 +95,7 @@ You can tell Cody what to do using the `:cody [command]` format.
 | `:cody refresh` | Refreshes the AI AGENT's memory about the current. |
 | `:cody refresh update` | Refreshes the AI AGENT's memory about the current and the AI AGENT updates the `plan.md` and `prd.md` files with the latest project changes. |
 | `:cody relearn` | It forces the AI AGENT to re-read the Cody `agent.md` file to check for any updates |
+| `:cody upgrade` | Upgrades the Cody framework to the latest version from GitHub |
 | `:cody assets list` | Lists all the files stored in the assets folder, along with a description of what they are used for |
 
 ## File Structure
@@ -113,8 +114,13 @@ You can tell Cody what to do using the `:cody [command]` format.
 │   │   ├── refresh-update.md
 │   │   ├── refresh.md
 │   │   ├── relearn.md
+│   │   ├── upgrade.md
 │   │   ├── add-version.md
 │   │   └── build-version.md
+│   ├── scripts/                # Utility scripts
+│   │   ├── upgrade-check.sh
+│   │   ├── upgrade-download.sh
+│   │   └── upgrade-install.sh
 │   └── templates/
 │       ├── plan/               # Planning phase templates
 │       │   ├── discovery.md
