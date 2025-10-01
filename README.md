@@ -7,6 +7,12 @@
 ![Version](https://img.shields.io/badge/version-1.1.0-blue)
 [![License](https://img.shields.io/badge/license-Custom-green)](LICENSE.md)
 
+# Join our Discord Server
+Get the latest updates, news and more by [joining our Discord server](https://discord.gg/Mz7vdRmpJH).
+
+# Star our repo!
+If you like this project, please don't forget to give it a star above!  Thank you!
+
 # About Cody SDD Framework
 Say hello to Cody, a spec-driven development framework built specifically to help Vibe Coders bring their ideas to life. Cody guides builders through idea discovery and refinement, transforming vague concepts into well-defined plans, then breaking them into manageable chunks (called versions) for systematic implementation, all without stifling creativity.
 
