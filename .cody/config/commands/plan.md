@@ -25,11 +25,11 @@ PLAN PHASE : START
 - **AGENT** show the **USER** the following: 
 ```
 Great. I’m going to ask you questions to fully understand the outcome you want.
-If you are not sure how to answer, just type "hint" and I’ll provide you with some example answers based on your idea.
+If you are not sure how to answer, just type "help me" and I’ll provide you with some example answers based on your idea.
 If you don’t want me to ask any more questions, just type "no more".
 ```
 
-- If the **USER** types `hint` after a question, instead of giving you an answer, provide the **USER** with 5 possible ways they can answer the question.
+- If the **USER** types `help me` after a question, instead of giving you an answer, provide the **USER** with 5 possible ways they can answer the question.
 - If the **USER** types `no more` (or anything equivalent):  
 - If you already have enough information to satisfy the **Knowledge Criteria**, stop and summarize your understanding.  
 - If you do **not** have enough information, explain politely that you may not be able to guide them effectively without a bit more detail, and suggest continuing with at least a few more questions.  
