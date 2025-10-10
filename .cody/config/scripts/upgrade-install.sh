@@ -6,6 +6,15 @@ set -e
 LOCAL_CONFIG_PATH="./.cody/config"
 UPGRADE_CONFIG_PATH="./.cody/config.upgrade"
 
+# Cody-managed files to sync
+CLAUDE_FILES=(
+    "commands/cody.md"
+)
+
+GITHUB_FILES=(
+    "prompts/cody.prompt.md"
+)
+
 # Function to output JSON result
 output_json() {
     local status="$1"
@@ -29,6 +38,46 @@ EOF
 extract_version() {
     local json_content="$1"
     echo "$json_content" | grep '"version"' | sed 's/.*"version"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/' | tr -d '[:space:]'
+}
+
+# Function to sync specific files from upgrade folder to target folder
+# Args: $1=folder_name (e.g., ".claude"), $2=array_name (e.g., "CLAUDE_FILES")
+sync_folder_files() {
+    local folder_name="$1"
+    shift
+    local -a files_array=("$@")
+    local source_folder="$UPGRADE_CONFIG_PATH/$folder_name"
+    local target_folder="./$folder_name"
+
+    # Skip if source doesn't exist
+    if [ ! -d "$source_folder" ]; then
+        return 0
+    fi
+
+    # Create target folder if it doesn't exist
+    if [ ! -d "$target_folder" ]; then
+        mkdir -p "$target_folder" 2>/dev/null || {
+            echo "Warning: Could not create $target_folder" >&2
+            return 1
+        }
+    fi
+
+    # Copy each file in the array
+    for file in "${files_array[@]}"; do
+        local source_file="$source_folder/$file"
+        local target_file="$target_folder/$file"
+
+        if [ -f "$source_file" ]; then
+            # Create parent directory if needed
+            local parent_dir=$(dirname "$target_file")
+            mkdir -p "$parent_dir" 2>/dev/null
+
+            # Copy file (overwrites if exists)
+            cp "$source_file" "$target_file" 2>/dev/null || {
+                echo "Warning: Could not copy $file to $target_folder" >&2
+            }
+        fi
+    done
 }
 
 # Check if we're running from the upgrade config directory
@@ -73,12 +122,34 @@ else
     exit 1
 fi
 
-# Create backup of current config with timestamp
-backup_path="${LOCAL_CONFIG_PATH}.backup.$(date +%Y%m%d_%H%M%S)"
-cp -r "$LOCAL_CONFIG_PATH" "$backup_path" 2>/dev/null || {
-    output_json "error" "$CURRENT_VERSION" "$TARGET_VERSION" "Failed to create backup of current configuration." ""
+# Create versioned backup
+BACKUP_ROOT="./.cody/backup"
+backup_path="${BACKUP_ROOT}/${CURRENT_VERSION}"
+
+# Create backup directory structure
+mkdir -p "$backup_path" 2>/dev/null || {
+    output_json "error" "$CURRENT_VERSION" "$TARGET_VERSION" "Failed to create backup directory." ""
     exit 1
 }
+
+# Backup .cody/config (maintain folder structure)
+if [ -d "$LOCAL_CONFIG_PATH" ]; then
+    mkdir -p "$backup_path/.cody" 2>/dev/null
+    cp -r "$LOCAL_CONFIG_PATH" "$backup_path/.cody/config" 2>/dev/null || {
+        output_json "error" "$CURRENT_VERSION" "$TARGET_VERSION" "Failed to backup config directory." ""
+        exit 1
+    }
+fi
+
+# Backup .claude folder (if exists)
+if [ -d "./.claude" ]; then
+    cp -r "./.claude" "$backup_path/.claude" 2>/dev/null
+fi
+
+# Backup .github folder (if exists)
+if [ -d "./.github" ]; then
+    cp -r "./.github" "$backup_path/.github" 2>/dev/null
+fi
 
 # Remove original config directory
 rm -rf "$LOCAL_CONFIG_PATH" || {
@@ -102,7 +173,11 @@ if [ -f "$LOCAL_CONFIG_PATH/settings.json" ]; then
     if [ -n "$installed_content" ]; then
         installed_version=$(extract_version "$installed_content")
         if [ "$installed_version" = "$TARGET_VERSION" ]; then
-            output_json "success" "$CURRENT_VERSION" "$TARGET_VERSION" "Cody framework successfully upgraded. Backup of previous version created." "$backup_path"
+            # Sync additional folders
+            sync_folder_files ".claude" "${CLAUDE_FILES[@]}"
+            sync_folder_files ".github" "${GITHUB_FILES[@]}"
+
+            output_json "success" "$CURRENT_VERSION" "$TARGET_VERSION" "Cody framework successfully upgraded. Backup saved to .cody/backup/$CURRENT_VERSION" "$backup_path"
         else
             output_json "error" "$CURRENT_VERSION" "$installed_version" "Installation completed but version verification failed. Expected $TARGET_VERSION, got $installed_version. Backup available at $backup_path." "$backup_path"
         fi

@@ -106,6 +106,21 @@ cp -r "$temp_dir/cody-framework-main/.cody/config" "$UPGRADE_CONFIG_PATH" || {
     exit 1
 }
 
+# Copy additional folders to config.upgrade
+if [ -d "$temp_dir/cody-framework-main/.claude" ]; then
+    cp -r "$temp_dir/cody-framework-main/.claude" "$UPGRADE_CONFIG_PATH/.claude" 2>/dev/null || {
+        output_json "error" "$TARGET_VERSION" "Failed to copy .claude folder to upgrade directory."
+        exit 1
+    }
+fi
+
+if [ -d "$temp_dir/cody-framework-main/.github" ]; then
+    cp -r "$temp_dir/cody-framework-main/.github" "$UPGRADE_CONFIG_PATH/.github" 2>/dev/null || {
+        output_json "error" "$TARGET_VERSION" "Failed to copy .github folder to upgrade directory."
+        exit 1
+    }
+fi
+
 # Verify the downloaded version
 if [ -f "$UPGRADE_CONFIG_PATH/settings.json" ]; then
     downloaded_content=$(cat "$UPGRADE_CONFIG_PATH/settings.json" 2>/dev/null)
