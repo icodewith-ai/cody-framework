@@ -1,8 +1,3 @@
----
-description: "Activate Cody Framework"
-allowed-tools: ["Read"]
----
-
 # Activate Cody Framework
 
 Please read and activate the Cody Framework by following these steps:
