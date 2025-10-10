@@ -157,6 +157,10 @@ fi
 sync_folder_files ".claude" "${CLAUDE_FILES[@]}"
 sync_folder_files ".github" "${GITHUB_FILES[@]}"
 
+# Clean up staging folders from config.upgrade (so they don't end up in .cody/config/)
+rm -rf "$UPGRADE_CONFIG_PATH/.claude" 2>/dev/null
+rm -rf "$UPGRADE_CONFIG_PATH/.github" 2>/dev/null
+
 # Remove original config directory
 rm -rf "$LOCAL_CONFIG_PATH" || {
     output_json "error" "$CURRENT_VERSION" "$TARGET_VERSION" "Failed to remove original config directory. Backup available at $backup_path." "$backup_path"
