@@ -143,12 +143,14 @@ fi
 
 # Backup .claude folder (if exists)
 if [ -d "./.claude" ]; then
-    cp -r "./.claude" "$backup_path/.claude" 2>/dev/null
+    mkdir -p "$backup_path/.claude" 2>/dev/null
+    cp -r "./.claude/." "$backup_path/.claude/" 2>/dev/null
 fi
 
 # Backup .github folder (if exists)
 if [ -d "./.github" ]; then
-    cp -r "./.github" "$backup_path/.github" 2>/dev/null
+    mkdir -p "$backup_path/.github" 2>/dev/null
+    cp -r "./.github/." "$backup_path/.github/" 2>/dev/null
 fi
 
 # Sync additional folders BEFORE renaming config
