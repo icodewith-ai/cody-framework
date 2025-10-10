@@ -151,6 +151,10 @@ if [ -d "./.github" ]; then
     cp -r "./.github" "$backup_path/.github" 2>/dev/null
 fi
 
+# Sync additional folders BEFORE renaming config
+sync_folder_files ".claude" "${CLAUDE_FILES[@]}"
+sync_folder_files ".github" "${GITHUB_FILES[@]}"
+
 # Remove original config directory
 rm -rf "$LOCAL_CONFIG_PATH" || {
     output_json "error" "$CURRENT_VERSION" "$TARGET_VERSION" "Failed to remove original config directory. Backup available at $backup_path." "$backup_path"
@@ -173,10 +177,6 @@ if [ -f "$LOCAL_CONFIG_PATH/settings.json" ]; then
     if [ -n "$installed_content" ]; then
         installed_version=$(extract_version "$installed_content")
         if [ "$installed_version" = "$TARGET_VERSION" ]; then
-            # Sync additional folders
-            sync_folder_files ".claude" "${CLAUDE_FILES[@]}"
-            sync_folder_files ".github" "${GITHUB_FILES[@]}"
-
             output_json "success" "$CURRENT_VERSION" "$TARGET_VERSION" "Cody framework successfully upgraded. Backup saved to .cody/backup/$CURRENT_VERSION" "$backup_path"
         else
             output_json "error" "$CURRENT_VERSION" "$installed_version" "Installation completed but version verification failed. Expected $TARGET_VERSION, got $installed_version. Backup available at $backup_path." "$backup_path"
