@@ -107,6 +107,10 @@ You can tell Cody what to do using the `:cody [command]` format.
 ## File Structure
 
 ```
+.claude/
+└── commands/
+    └── cody.md                    # Claude Code slash command integration
+
 .cody/
 ├── config/
 │   ├── activate.md          	# Cody Framework activation instructions
@@ -139,11 +143,11 @@ You can tell Cody what to do using the `:cody [command]` format.
 │               ├── tasklist.md
 │               └── retrospective.md
 └── project/
-  ├── library/                     
+  ├── library/
   │   ├── assets/                  # Any assets for the User or AI.
   │   ├── docs/                    # On-Demand or Ad-hoc documentation.
   ├── plan/                        # Documents created during the plan phase.
-  │   ├── discovery.md             
+  │   ├── discovery.md
   │   ├── prd.md
   │   └── plan.md
   └── build/                       # Documents created during the build phase.
@@ -152,6 +156,10 @@ You can tell Cody what to do using the `:cody [command]` format.
       ├── design.md
       ├── tasklist.md
       └── retrospective.md
+
+.github/
+└── prompts/
+    └── cody.prompt.md             # GitHub Copilot prompt integration
 ```
 
 ## Best Practices
@@ -179,14 +187,18 @@ You can tell Cody what to do using the `:cody [command]` format.
 - Use the AI agent to explore alternative approaches
 - Review successful past versions for patterns to repeat
  
-## Installing and Using It
+## Installing and Using Cody
 
 The Cody Framework can be easily added to any project by following these steps:
 
-### Installation
+### Installing It
 1. **Download Cody**: Clone or download Cody from https://github.com/icodewith-ai/cody-framework
-2. **Install Cody**: Copy only the `.cody` folder into your project's root directory
-3. **Activate Cody**: Ask your AI assistant to "Please read and execute the @.cody/config/activate.md". This will activate Cody.
+2. **Install Cody**: Copy the `.cody`, `.claude`, and `.github` folders into your project's root directory
+
+### Activating It
+- **For Claude Code**: Use the `/cody` slash command
+- **For GitHub Copilot**: Use the `/cody` slash command
+- **For other AI assistants**: Ask your AI assistant to "Please read and execute the @.cody/config/activate.md"
 
 ### Using It
 Once activated, you can use these commands with your AI assistant to kick start the process:
