@@ -32,6 +32,7 @@ This phase guides USERS through the iterative development cycle by creating docu
 | Document | Description |
 |----------|-------------|
 | `feature-backlog.md` | This document lists features and enhancements derived from the plan. It lives on the top level of the Build phase, accessible by all versions. It is a living document that will evolve throughout the project. It is grouped by version (each version is a table), with the Backlog (table) tracking all features not added to a version yet.  It is used to build versions. |
+| `release-notes.md` | This document provides automatic release notes generation and management throughout the build lifecycle. It tracks all versions, key features, enhancements, bug fixes, and other notable changes. This document is created and updated automatically after each version build and during global project updates. |
 
 > Then we create versions based on the feature backlog. The following documents are used for every version a **USER** works on.
 

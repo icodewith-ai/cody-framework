@@ -48,6 +48,12 @@ When you (**AGENT**) reached the end of the version, tell the **USER** this vers
 - Copy from {{cfTemplates}}/build/version/retrospective.md to the current version folder.
 - Update the retrospective.md file.
 
+### CREATE / UPDATE RELEASE NOTES
+- Check to see if the {{cfWorkPhase}}/release-notes.md file exists.
+    - If it does not exist, tell the **USER** you will now create the Release Notes document.
+        - Copy from {{cfTemplates}}/build/release-notes.md to {{cfWorkPhase}}/release-notes.md.
+- Read and follow the instructions in the {{cfWorkPhase}}/release-notes.md file for updating it.
+
 ### REFRESH AI AGENT MEMORY AND PROJECT DOCUMENTS
 
 **AGENT ANNOUNCE**

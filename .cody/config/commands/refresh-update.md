@@ -34,6 +34,16 @@ description: Refreshes the memory about the current project of the AI AGENT and 
         - Remove any outdated information. (e.g. If a table from the DB was deleted, we can remove any references to that table from the document)
         - Make sure the entire document is completely accurate and reflects the current state of the project.
 
+# UPDATING RELEASE NOTES
+- Tell the **USER** that you are reading and updating the Release Notes document with the latest project information.
+- Find the release-notes.md file in `{{cfWorkPhase}}` root folder.
+        - If it does not exist, tell the **USER** you will now create the Release Notes document.
+                - Copy from `{{cfTemplates}}/build/release-notes.md` to `{{cfWorkPhase}}/release-notes.md`.
+- Read that file completely and thoroughly.
+- Review the all the available versions in the `{{cfWorkPhase}}\build` folder. 
+- Add any new versions that are missing `{{cfWorkPhase}}/release-notes.md`.
+- Make any other necessary changes you see fit to keep this document updated.
+
 # FINISH
 - Tell the **USER** you have completed your memory refresh.
 - Tell the **USER** what documents you updated.

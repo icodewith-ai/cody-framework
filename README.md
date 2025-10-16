@@ -4,7 +4,7 @@
 
 © Copyright 2025 - Red Pill Blue Pill Studios, LLC - All Rights Reseved.
 
-![Version](https://img.shields.io/badge/version-1.1.1-blue)
+![Version](https://img.shields.io/badge/version-1.1.3-blue)
 [![License](https://img.shields.io/badge/license-Custom-green)](LICENSE.md)
 
 # Join our Discord Server
@@ -77,6 +77,9 @@ Each version includes:
 ### Retrospective (`retrospective.md`)
 > The Retrospective is a post-version reflection document that captures the lessons learned throughout the development cycle. It highlights what worked well, identifies areas that could be improved, and records actionable items to guide and enhance future versions. This document benefits not only the human builder but, more importantly, the AI Development Agent, as it provides structured feedback that helps refine future interactions, improve decision-making, and optimize the overall development process.
 
+### Release Notes (`release-notes.md`)
+> The Release Notes document provides automatic release notes generation and management throughout the build lifecycle. It tracks all versions, key features, enhancements, bug fixes, and other notable changes. This document is created and updated automatically after each version build and during global project updates, ensuring stakeholders and team members have a clear, up-to-date record of all project changes.
+
 ## Version Naming Convention
 
 The Cody Framework uses semantic versioning with descriptive names:
@@ -96,10 +99,10 @@ You can tell Cody what to do using the `:cody [command]` format.
 | `:cody help` | Provides the USER with help about Cody. |
 | `:cody plan` | Creates a Cody project and starts the PLAN phase. |
 | `:cody build` | Starts the BUILD phase and creates the feature backlog. |
-| `:cody version build` | Begins the building phase of a particular version in `feature-backlog.md` file. |
+| `:cody version build` | Begins the building phase of a particular version in `feature-backlog.md` file. Automatically creates or updates `release-notes.md` when the version is completed. |
 | `:cody version add` | Adds a new version to the `feature-backlog.md` file. |
 | `:cody refresh` | Refreshes the AI AGENT's memory about the current. |
-| `:cody refresh update` | Refreshes the AI AGENT's memory about the current and the AI AGENT updates the `plan.md` and `prd.md` files with the latest project changes. |
+| `:cody refresh update` | Refreshes the AI AGENT's memory about the current and the AI AGENT updates the `plan.md`, `prd.md`, and `release-notes.md` files with the latest project changes. |
 | `:cody relearn` | It forces the AI AGENT to re-read the Cody `agent.md` file to check for any updates |
 | `:cody upgrade` | Upgrades the Cody framework to the latest version from GitHub |
 | `:cody assets list` | Lists all the files stored in the assets folder, along with a description of what they are used for |
@@ -138,6 +141,7 @@ You can tell Cody what to do using the `:cody [command]` format.
 │       │   └── plan.md
 │       └── build/              # Build phase templates
 │           ├── feature-backlog.md
+│           ├── release-notes.md
 │           └── version/
 │               ├── design.md
 │               ├── tasklist.md
@@ -152,6 +156,7 @@ You can tell Cody what to do using the `:cody [command]` format.
   │   └── plan.md
   └── build/                       # Documents created during the build phase.
     ├── feature-backlog.md
+    ├── release-notes.md
     └── v[x.y.z]-[name]/
       ├── design.md
       ├── tasklist.md
@@ -168,7 +173,7 @@ You can tell Cody what to do using the `:cody [command]` format.
 > In the planning phase, be thorough in discovery since the Q&A sets the direction and de-risks assumptions. Iterate on your documents and do not rush; refine each section until it clearly reflects the intent. Think modularly by breaking complex ideas into manageable components that can be built, tested, and reused. Finally, consider dependencies early by identifying external requirements and integrations upfront so timelines and scope remain realistic.
 
 ### For Build Phase
-> During the build phase, start small by delivering foundational features in the early versions to create momentum and validate the direction. Maintain the backlog consistently, updating it as requirements evolve to keep priorities clear and aligned. Incorporate regular retrospectives to reflect on what worked, what didn’t, and how to improve in the next cycle. Version strategically by grouping related features into logical sets, ensuring that each release delivers cohesive value while keeping the development process organized.
+> During the build phase, start small by delivering foundational features in the early versions to create momentum and validate the direction. Maintain the backlog consistently, updating it as requirements evolve to keep priorities clear and aligned. Incorporate regular retrospectives to reflect on what worked, what didn't, and how to improve in the next cycle. Version strategically by grouping related features into logical sets, ensuring that each release delivers cohesive value while keeping the development process organized. Keep release notes current by letting the AI automatically update them after each version build, and review them periodically to ensure accuracy and completeness.
 
 ### For AI Collaboration
 > When collaborating with AI, always provide context, the more detail captured during discovery, the more effective the AI’s assistance will be. Treat generated content as a draft, reviewing and refining it to ensure accuracy and alignment with your vision. Ask questions freely, using the AI to explore edge cases and uncover considerations you may not have thought of. Embrace iteration, as the process is designed for multiple rounds of refinement that gradually sharpen both the output and the overall direction.
