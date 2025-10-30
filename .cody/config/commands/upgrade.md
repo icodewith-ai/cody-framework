@@ -70,7 +70,7 @@ description: Upgrades the Cody framework to the latest version from GitHub.
 
 ### INSTALL UPGRADE
 - Tell the **USER** that you (**AGENT**) are now installing the upgrade
-- Use the Bash tool to run: `./.cody/config.upgrade/scripts/upgrade-install.sh`
+- Use the Bash tool to run: `{{cfScripts}}/upgrade-install.sh`
 - Parse the JSON output from the install script and extract:
   - status (required): "success" or "error"
   - from_version (optional): Version upgraded from
